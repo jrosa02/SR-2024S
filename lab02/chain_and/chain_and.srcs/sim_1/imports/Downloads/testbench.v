@@ -31,7 +31,7 @@ initial
 begin
     while(1)
     begin
-        #1 inputs_reg = inputs_reg + 1;
+        #2 inputs_reg = inputs_reg + 1;
     end//while
 end//initial
 

@@ -31,7 +31,7 @@ module delay_line #
     output [N-1:0] y
     );
     
-wire [N-1:0]internal_wires[DELAY:0];
+wire [N-1:0]internal_wires[DELAY+1:0];
     
 genvar delay;
 generate
@@ -40,9 +40,9 @@ generate
     else begin
     
         assign internal_wires[0]=x;
-        assign y = internal_wires[DELAY];
+        assign y = internal_wires[DELAY+1];
         
-        for (delay = 0; delay < DELAY; delay = delay + 1) begin
+        for (delay = 0; delay < DELAY+1; delay = delay + 1) begin
         
             register 
             # (

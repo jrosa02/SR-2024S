@@ -28,6 +28,8 @@ parameter WIDTH = $clog2(N)
 ();
 
 reg clk = 0;
+reg ce = 0;
+reg rst = 0;
 wire [WIDTH-1:0]y;
 
 initial begin
@@ -36,6 +38,11 @@ initial begin
         #1; clk=0;
     end
 end 
+initial begin
+    #10; ce = 1;
+    #20; rst = 1;
+end 
+
 
 mod_cnt #
 (
@@ -44,8 +51,8 @@ mod_cnt #
 modulo
 (
     .clk(clk),
-    .ce(1),
-    .rst(0),
+    .ce(ce),
+    .rst(rst),
     .y(y)
 );
 

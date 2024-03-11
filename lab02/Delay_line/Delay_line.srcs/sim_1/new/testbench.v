@@ -22,8 +22,8 @@
 
 module testbench # 
 (
-    N = 4,
-    DELAY = 1
+    N = 2,
+    DELAY = 0
 )
 ();
 

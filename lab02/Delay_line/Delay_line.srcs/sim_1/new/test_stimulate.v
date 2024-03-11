@@ -37,6 +37,7 @@ assign x = x_reg;
 assign clk = clk_reg;
 
 initial begin
+    #1;
     while(1) begin
         #1; clk_reg <= 1;
         #1; clk_reg <= 0;

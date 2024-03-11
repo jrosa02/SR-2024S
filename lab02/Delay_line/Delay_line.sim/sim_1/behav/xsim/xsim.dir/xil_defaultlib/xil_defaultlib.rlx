@@ -3,7 +3,7 @@
 Feb 21 2023
 20:21:35
 C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/test_stimulate.v,1710017359,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/testbench.v,,test_stimulate,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/testbench.v,1710017418,verilog,,,,testbench,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sources_1/new/delay_line.v,1710018299,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sources_1/new/register.v,,delay_line,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/test_stimulate.v,1710147999,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/testbench.v,,test_stimulate,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/testbench.v,1710149223,verilog,,,,testbench,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sources_1/new/delay_line.v,1710148117,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sources_1/new/register.v,,delay_line,,,,,,,,
 C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sources_1/new/register.v,1710017634,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab02/Delay_line/Delay_line.srcs/sim_1/new/test_stimulate.v,,register,,,,,,,,

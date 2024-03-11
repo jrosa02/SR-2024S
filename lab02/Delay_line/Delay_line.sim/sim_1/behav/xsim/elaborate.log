@@ -8,9 +8,8 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.test_stimulate
-Compiling module xil_defaultlib.register
-Compiling module xil_defaultlib.delay_line_default
+Compiling module xil_defaultlib.test_stimulate(N=2)
+Compiling module xil_defaultlib.delay_line(N=2,DELAY=0)
 Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot testbench_behav
