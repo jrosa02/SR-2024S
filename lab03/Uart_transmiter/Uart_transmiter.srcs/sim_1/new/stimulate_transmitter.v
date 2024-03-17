@@ -20,11 +20,38 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module stimulate_transmitter();
+module stimulate_transmitter
+(
+    output clk,
+    output rst,
+    output send,
+    output [7:0]data
+);
+
+integer file;
+reg clk_reg = 0;
+reg [7:0] data_reg = 0;
+reg send_reg = 0;
+reg [7:0] i;
 
 initial begin
-    for(
-
+    clk_reg <= 0; file = $fopen("C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/simulate_bin.bin", "rb");
+    for (i=0; i<16; i=i+1) begin
+        #1 clk_reg <= 1;
+        #1 data_reg <= $fgetc(file); send_reg <= 1;
+        #2 send_reg <=0;
+        #20;
+        
+    end
+    $fclose(file);
 end
+
+always #1 clk_reg = ~clk_reg;
+
+assign send = send_reg;
+assign data = data_reg;
+assign clk = clk_reg;
+assign rst = 0;
+
 
 endmodule

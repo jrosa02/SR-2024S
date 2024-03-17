@@ -29,9 +29,9 @@ module transmitter_uart(
     );
     
 localparam IDLE = 2'd0;
-localparam STARTING = 2'd0;
-localparam SENDING = 2'd0;
-localparam ENDING = 2'd0;
+localparam STARTING = 2'd1;
+localparam SENDING = 2'd2;
+localparam ENDING = 2'd3;
 
 reg [7:0]data_reg = 0;
 reg [1:0]state = IDLE;
