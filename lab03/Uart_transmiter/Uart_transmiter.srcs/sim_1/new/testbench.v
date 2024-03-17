@@ -41,7 +41,7 @@ stimulate_transmitter stim
 transmitter_uart tuart
 (
     .clk(clk),
-    .rst(rst),
+    .rst(0),
     .send(send),
     .data(data),
     .txd(txd)
