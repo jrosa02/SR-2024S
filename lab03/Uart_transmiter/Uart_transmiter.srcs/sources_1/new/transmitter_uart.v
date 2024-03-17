@@ -61,8 +61,8 @@ always @(posedge clk) begin
         
         SENDING:
         begin
-            cnt_reg <= cnt_reg + 1;
             txd_reg <= data[cnt_reg];
+            cnt_reg <= cnt_reg + 1;
             if(cnt_reg == 3'b111) state <= ENDING;
         end
         
