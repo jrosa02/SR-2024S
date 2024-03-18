@@ -46,6 +46,7 @@ always @(posedge clk) begin
         case(state)
         IDLE:
         begin
+            txd_reg <= 0;
             if (send == 1 & prev_send == 0) begin
                 data_reg <= data; // copy data on sending
                 state <= STARTING;
