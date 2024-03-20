@@ -27,22 +27,22 @@ module cam #
 (
     input clk,
     input ce,
-    input [N-1:0] A,
-    input [N-1:0] B,
-    input [N-1:0] C,
-    output [2*N:0] Y
+    input signed [N-1:0] inA,
+    input signed [N-1:0] inB,
+    input signed [N-1:0] inC,
+    output signed [2*N:0] outY
 );
 
-wire signed [N-1:0]AB;
-wire signed [N-1:0]AB_d;
+wire signed [N-1:0] plus;
+wire signed [N-1:0] delC;
 
 c_addsub_0 summ
 (
-    .A(A),
-    .B(A),
+    .A(inA),
+    .B(inB),
     .CLK(clk),
     .CE(ce),
-    .S(AB)
+    .S(plus)
 );
 
 delay_line #
@@ -53,8 +53,18 @@ delay_line #
 dellin
 (
     .clk(clk),
-    .x(AB),
-    .y(AB_d)
+    .x(inC),
+    .y(delC),
+    .ce(ce)
+);
+
+mult_gen_0 multt
+(
+    .CLK(clk),
+    .CE(ce),
+    .A(plus),
+    .B(delC),
+    .P(outY)
 );
 
 endmodule
