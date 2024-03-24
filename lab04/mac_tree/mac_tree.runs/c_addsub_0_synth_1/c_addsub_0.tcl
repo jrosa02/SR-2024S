@@ -92,7 +92,7 @@ set_property ip_output_repo c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/mac_t
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/mac_tree/mac_tree.srcs/sources_1/ip/c_addsub_0/c_addsub_0.xci
+read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/mac_tree/mac_tree.srcs/sources_1/ip/c_addsub_0/c_addsub_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/mac_tree/mac_tree.gen/sources_1/ip/c_addsub_0/c_addsub_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

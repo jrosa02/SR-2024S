@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/accum/accum.srcs/sources_1/new/accum.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accum
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/accum/accum.srcs/sources_1/imports/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/accum/accum.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+WARNING: [VRFC 10-8497] literal value 'hFFFF truncated to fit in 13 bits [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/accum/accum.srcs/sim_1/new/testbench.v:27]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab04/accum/accum.srcs/sim_1/new/testbench.v:35]

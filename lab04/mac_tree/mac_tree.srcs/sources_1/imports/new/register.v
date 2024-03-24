@@ -35,7 +35,8 @@ reg [N-1:0] val = 0;
 
 always @(posedge clk)
 begin
-    val <= x;
+    if(ce) val <= x;
+    else val <= val;
 end
 
 assign y = val;

@@ -53,11 +53,11 @@
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT c_addsub_3
   PORT (
-    A : IN STD_LOGIC_VECTOR(34 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(34 DOWNTO 0);
+    A : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(35 DOWNTO 0);
     CLK : IN STD_LOGIC;
     CE : IN STD_LOGIC;
-    S : OUT STD_LOGIC_VECTOR(34 DOWNTO 0) 
+    S : OUT STD_LOGIC_VECTOR(36 DOWNTO 0) 
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------

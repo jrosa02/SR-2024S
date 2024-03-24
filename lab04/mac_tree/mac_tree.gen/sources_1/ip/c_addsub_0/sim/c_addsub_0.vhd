@@ -59,10 +59,10 @@ USE c_addsub_v12_0_14.c_addsub_v12_0_14;
 ENTITY c_addsub_0 IS
   PORT (
     A : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     CLK : IN STD_LOGIC;
     CE : IN STD_LOGIC;
-    S : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
+    S : OUT STD_LOGIC_VECTOR(18 DOWNTO 0)
   );
 END c_addsub_0;
 
@@ -100,7 +100,7 @@ ARCHITECTURE c_addsub_0_arch OF c_addsub_0 IS
     );
     PORT (
       A : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-      B : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+      B : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
       CLK : IN STD_LOGIC;
       ADD : IN STD_LOGIC;
       C_IN : IN STD_LOGIC;
@@ -110,7 +110,7 @@ ARCHITECTURE c_addsub_0_arch OF c_addsub_0 IS
       SSET : IN STD_LOGIC;
       SINIT : IN STD_LOGIC;
       C_OUT : OUT STD_LOGIC;
-      S : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
+      S : OUT STD_LOGIC_VECTOR(18 DOWNTO 0)
     );
   END COMPONENT c_addsub_v12_0_14;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -132,15 +132,15 @@ BEGIN
       C_XDEVICEFAMILY => "zynq",
       C_IMPLEMENTATION => 1,
       C_A_WIDTH => 18,
-      C_B_WIDTH => 18,
-      C_OUT_WIDTH => 18,
+      C_B_WIDTH => 13,
+      C_OUT_WIDTH => 19,
       C_CE_OVERRIDES_SCLR => 0,
       C_A_TYPE => 0,
       C_B_TYPE => 0,
       C_LATENCY => 2,
       C_ADD_MODE => 0,
       C_B_CONSTANT => 0,
-      C_B_VALUE => "000000000000000000",
+      C_B_VALUE => "0000000000000",
       C_AINIT_VAL => "0",
       C_SINIT_VAL => "0",
       C_CE_OVERRIDES_BYPASS => 1,

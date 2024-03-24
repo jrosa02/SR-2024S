@@ -27,7 +27,7 @@ module cam_tree(
     input signed [7:0] D,
     input signed [13:0] E,
     input signed [18:0] F,
-    output signed [35:0] Y,
+    output signed [36:0] Y,
     input clk,
     input ce,
     output ce_out
@@ -45,7 +45,7 @@ module cam_tree(
     c_addsub_0 ABadd
     (
     .A(A),
-    .B({B,10'h000}),
+    .B({B, 5'b00000}),
     .S(AB2mul),
     .CE(ce),
     .CLK(clk)
@@ -66,8 +66,8 @@ module cam_tree(
     
     c_addsub_2 DEadd
     (
-    .A(E),
-    .B({D, 6'h000}),
+    .A({D, 3'b000}),
+    .B(E),
     .S(DE2mul),
     .CE(ce),
     .CLK(clk)
@@ -75,8 +75,8 @@ module cam_tree(
     
     c_addsub_1 EFadd
     (
-    .A(F),
-    .B({E, 5'h000}),
+    .A({E, 4'b0000}),
+    .B(F),
     .S(EF2mul),
     .CE(ce),
     .CLK(clk)
@@ -115,10 +115,10 @@ module cam_tree(
     
     c_addsub_3 Yadd
     (
-    .A(DEEF2sum),
-    .B({ABC2sum, 4'h000}),
+    .A(ABC2sum),
+    .B({DEEF2sum, 1'b0}),
     .S(Y),
-    .CE(ce),
+    .CE(ce_del2),
     .CLK(clk)
     );
     
