@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../mul_matrix.srcs/sources_1/imports/new/delay_line.v" \
+"../../../../mul_matrix.srcs/sources_1/new/matmul.v" \
+"../../../../mul_matrix.srcs/sources_1/imports/new/register.v" \
+"../../../../mul_matrix.srcs/sources_1/new/vector_mul.v" \
+"../../../../mul_matrix.srcs/sim_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

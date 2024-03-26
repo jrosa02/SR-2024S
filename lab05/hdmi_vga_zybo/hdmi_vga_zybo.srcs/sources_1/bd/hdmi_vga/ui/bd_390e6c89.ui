@@ -1,0 +1,24 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.01461",
+   "Default View_TopLeft":"-129,-137",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port hdmi_in -pg 1 -lvl 0 -x -30 -y -40 -defaultsOSRD
+preplace port hdmi_in_ddc -pg 1 -lvl 4 -x 770 -y 100 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -x 330 -y 120 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 40 -defaultsOSRD
+preplace inst rgb2vga_0 -pg 1 -lvl 3 -x 630 -y -20 -defaultsOSRD
+preplace netloc sys_clk_1 1 0 1 -10 20n
+preplace netloc clk_wiz_0_clk_out1 1 1 1 200 40n
+preplace netloc dvi2rgb_0_PixelClk 1 2 1 450 -10n
+preplace netloc hdmi_in_1 1 0 2 N -40 210
+preplace netloc dvi2rgb_0_RGB 1 2 1 440 -30n
+preplace netloc dvi2rgb_0_DDC 1 2 2 N 100 N
+levelinfo -pg 1 -30 110 330 630 770
+pagesize -pg 1 -db -bbox -sgen -130 -240 900 300
+"
+}
+
