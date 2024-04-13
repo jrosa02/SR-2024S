@@ -68,14 +68,15 @@ assign color_wire = pixel_wire[23:16]&pixel_wire[15:8]&pixel_wire[7:0];
 
 always @(posedge clk) begin
 
-    pixel_reg <= {color_wire, color_wire, color_wire};
+    //pixel_reg <= {color_wire, color_wire, color_wire};
     h_sync_reg <= h_sync_in;
     v_sync_reg <= v_sync_in;
     de_reg <= de_in;
 
 end //always
 
-assign pixel_out = pixel_reg;
+//assign pixel_out = pixel_reg;
+assign pixel_out = {color_wire, color_wire, color_wire};
 assign h_sync_out = h_sync_reg;
 assign v_sync_out = v_sync_reg;
 assign de_out = de_reg;

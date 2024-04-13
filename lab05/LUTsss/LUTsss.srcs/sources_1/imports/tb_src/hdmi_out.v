@@ -40,7 +40,7 @@ begin
   
     fm1 = $fopen({"zdj/out_",vsc[5:0]/10+8'h30,vsc[5:0]%10+8'h30,".ppm"},"wb");
 
-	 $display("out%d.ppm saved",vsc);
+	 $display("zdj/out%d.ppm saved",vsc);
 	 
    $fwrite(fm1,"P6%c64 64%c255\n",10,10);
    

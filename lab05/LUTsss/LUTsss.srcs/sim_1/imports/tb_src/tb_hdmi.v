@@ -72,7 +72,7 @@ vp vp_i (
     .h_sync_in(rx_hsync),
     .v_sync_in(rx_vsync),
     .pixel_in({rx_red,rx_green,rx_blue}),
-    .sw(sw),
+    //.sw(sw),
     
     .de_out(lut_de),
     .h_sync_out(lut_hsync),
