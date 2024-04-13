@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x374A7219F73E9840",
+      "boundary_crc": "0xC84CBE19D7D4ADA9",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../hdmi_vga_zybo.gen/sources_1/bd/hdmi_vga",
       "name": "hdmi_vga",
@@ -78,31 +78,6 @@
       }
     },
     "ports": {
-      "sys_clk": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "hdmi_vga_sys_clk",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "125000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
       "vga_pRed": {
         "direction": "O",
         "left": "4",
@@ -133,6 +108,30 @@
         "direction": "O",
         "left": "0",
         "right": "0"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "hdmi_vga_sys_clk"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -314,9 +313,9 @@
           "vga_pVSync"
         ]
       },
-      "sys_clk_1": {
+      "sys_clock_1": {
         "ports": [
-          "sys_clk",
+          "sys_clock",
           "clk_wiz_0/clk_in1"
         ]
       },

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Sun Mar 31 23:28:21 2024
+//Date        : Mon Apr  8 10:37:38 2024
 //Host        : DellInspiron running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi_vga.bd
 //Design      : hdmi_vga
@@ -23,7 +23,7 @@ module hdmi_vga
     hdmi_in_ddc_sda_o,
     hdmi_in_ddc_sda_t,
     hdmi_out_en,
-    sys_clk,
+    sys_clock,
     vga_pBlue,
     vga_pGreen,
     vga_pHSync,
@@ -41,7 +41,7 @@ module hdmi_vga
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_O" *) output hdmi_in_ddc_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_T" *) output hdmi_in_ddc_sda_t;
   output [0:0]hdmi_out_en;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLK, CLK_DOMAIN hdmi_vga_sys_clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN hdmi_vga_sys_clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
   output [4:0]vga_pBlue;
   output [5:0]vga_pGreen;
   output vga_pHSync;
@@ -69,7 +69,7 @@ module hdmi_vga
   wire rgb2vga_0_vga_pHSync;
   wire [4:0]rgb2vga_0_vga_pRed;
   wire rgb2vga_0_vga_pVSync;
-  wire sys_clk_1;
+  wire sys_clock_1;
   wire [0:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
 
@@ -85,14 +85,14 @@ module hdmi_vga
   assign hdmi_in_ddc_sda_o = dvi2rgb_0_DDC_SDA_O;
   assign hdmi_in_ddc_sda_t = dvi2rgb_0_DDC_SDA_T;
   assign hdmi_out_en[0] = xlconstant_1_dout;
-  assign sys_clk_1 = sys_clk;
+  assign sys_clock_1 = sys_clock;
   assign vga_pBlue[4:0] = rgb2vga_0_vga_pBlue;
   assign vga_pGreen[5:0] = rgb2vga_0_vga_pGreen;
   assign vga_pHSync = rgb2vga_0_vga_pHSync;
   assign vga_pRed[4:0] = rgb2vga_0_vga_pRed;
   assign vga_pVSync = rgb2vga_0_vga_pVSync;
   hdmi_vga_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(sys_clk_1),
+       (.clk_in1(sys_clock_1),
         .clk_out1(clk_wiz_0_clk_out1));
   hdmi_vga_dvi2rgb_0_0 dvi2rgb_0
        (.PixelClk(dvi2rgb_0_PixelClk),
