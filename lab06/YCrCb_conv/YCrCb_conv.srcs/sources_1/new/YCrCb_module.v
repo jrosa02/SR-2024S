@@ -44,7 +44,7 @@ YCrCb_submod #
 Y_submod
 (
     .clk(clk),
-    .ce(de_in),
+    .ce(1),
     .x(pixel_in),
 
     .y(pixel_out[23:16])
@@ -56,12 +56,12 @@ YCrCb_submod #
     .A1(18'h3a99b),
     .A2(18'h35665),
     .A3(18'h10000),
-    .B1(9'h80)
+    .B1(9'h080)
 )
 Cb_submod
 (
     .clk(clk),
-    .ce(de_in),
+    .ce(1),
     .x(pixel_in),
 
     .y(pixel_out[15:8])
@@ -72,12 +72,12 @@ YCrCb_submod #
     .A1(18'h10000),
     .A2(18'h329a2),
     .A3(18'h3d65e),
-    .B1(9'h80)
+    .B1(9'h080)
 )
 Cr_submod
 (
     .clk(clk),
-    .ce(de_in),
+    .ce(1),
     .x(pixel_in),
 
     .y(pixel_out[7:0])
@@ -86,12 +86,12 @@ Cr_submod
 delay_line #
 (
     .N(3),
-    .DELAY(5)
+    .DELAY(9)
 )
 del_sync
 (
     .clk(clk),
-    .ce(de_in),
+    .ce(1),
     .x({h_sync_in, v_sync_in, de_in}),
     
     .y({h_sync_out, v_sync_out, de_out})

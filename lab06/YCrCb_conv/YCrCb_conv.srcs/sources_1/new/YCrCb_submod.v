@@ -74,22 +74,22 @@ adder add1
 (
     .CLK(clk),
     .CE(ce),
-    .A(mult_out[0][35:27]),
-    .B(mult_out[1][35:27]),
+    .A(mult_out[0][25:17]),
+    .B(mult_out[1][25:17]),
     
     .S(adder1_out[0])
 );
 
 delay_line #
 (
-    .DELAY(3),
+    .DELAY(2),
     .N(9)
-) 
+)
 mult2add_delay
 (
     .clk(clk),
     .ce(ce),
-    .x(mult_out[2][35:27]),
+    .x(mult_out[2][25:17]),
     
     .y(delay_out)
 );
