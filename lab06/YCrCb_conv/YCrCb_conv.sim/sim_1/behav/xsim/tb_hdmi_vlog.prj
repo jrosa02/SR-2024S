@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../LUTsss.gen/sources_1/bd/hdmi_vga/ipshared/7698" \
+"../../../../LUTsss.gen/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" \
+"../../../../LUTsss.srcs/sources_1/imports/tb_src/hdmi_in.v" \
+"../../../../LUTsss.srcs/sources_1/imports/tb_src/hdmi_out.v" \
+"../../../../LUTsss.srcs/sources_1/new/vp.v" \
+"../../../../LUTsss.srcs/sim_1/imports/tb_src/tb_hdmi.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

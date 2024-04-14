@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+zdj/out  0.ppm saved
+Stopped at time : 1996 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab05/LUTsss/LUTsss.srcs/sources_1/imports/tb_src/hdmi_out.v" Line 45
+zdj/out  1.ppm saved
+Stopped at time : 16106 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab05/LUTsss/LUTsss.srcs/sources_1/imports/tb_src/hdmi_out.v" Line 45
+zdj/out  2.ppm saved
+Stopped at time : 30216 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab05/LUTsss/LUTsss.srcs/sources_1/imports/tb_src/hdmi_out.v" Line 45
+zdj/out  3.ppm saved
+Stopped at time : 44326 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab05/LUTsss/LUTsss.srcs/sources_1/imports/tb_src/hdmi_out.v" Line 45
+zdj/out  4.ppm saved
+Stopped at time : 58436 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab05/LUTsss/LUTsss.srcs/sources_1/imports/tb_src/hdmi_out.v" Line 45
