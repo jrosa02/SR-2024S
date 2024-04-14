@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../YCrCb_conv.gen/sources_1/ip/adder/sim/adder.vhd" \
+"../../../../YCrCb_conv.gen/sources_1/ip/multiply/sim/multiply.vhd" \
+
+# Do not sort compile order
+nosort

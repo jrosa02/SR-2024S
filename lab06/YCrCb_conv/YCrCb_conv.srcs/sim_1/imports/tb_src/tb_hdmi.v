@@ -55,16 +55,6 @@ hdmi_in file_input (
     .hdmi_g(rx_green), 
     .hdmi_b(rx_blue)
     );
-	 
-
-wire lut_de;
-wire lut_hsync;
-wire lut_vsync;
-
-wire [7:0] lut_red;
-wire [7:0] lut_green;
-wire [7:0] lut_blue;
-wire [2:0] sw;
 
 vp vp_i (
     .clk(rx_pclk),
@@ -74,10 +64,10 @@ vp vp_i (
     .pixel_in({rx_red,rx_green,rx_blue}),
     //.sw(sw),
     
-    .de_out(lut_de),
-    .h_sync_out(lut_hsync),
-    .v_sync_out(lut_vsync),
-    .pixel_out({lut_red,lut_green,lut_blue})
+    .de_out(tx_de),
+    .h_sync_out(tx_hsync),
+    .v_sync_out(tx_vsync),
+    .pixel_out({tx_red,tx_green,tx_blue})
 );
 	 
 	 
@@ -90,13 +80,6 @@ vp vp_i (
 //assign tx_red = rx_red;
 //assign tx_green = rx_green;
 //assign tx_blue = rx_blue;
-	 
-assign tx_de = lut_de;
-assign tx_hsync = lut_hsync;
-assign tx_vsync = lut_vsync;
-assign tx_red = lut_red;
-assign tx_green = lut_green;
-assign tx_blue = lut_blue;	 
 
 // --------------------------------------
 // HDMI output

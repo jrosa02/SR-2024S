@@ -23,7 +23,7 @@
 module testbench # 
 (
     N = 2,
-    DELAY = 0
+    DELAY = 5
 )
 ();
 

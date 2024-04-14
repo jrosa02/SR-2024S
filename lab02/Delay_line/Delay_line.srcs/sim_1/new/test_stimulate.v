@@ -44,10 +44,8 @@ initial begin
     end
 end
 
-initial begin
-    while(1) begin
-        #2; x_reg <= x_reg + 1;
-    end
+always @(posedge clk) begin
+         x_reg <= x_reg + 1;
 end
 
 endmodule
