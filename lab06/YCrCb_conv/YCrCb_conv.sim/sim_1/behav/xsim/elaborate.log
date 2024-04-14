@@ -62,6 +62,8 @@ Compiling module xil_defaultlib.register(N=9)
 Compiling module xil_defaultlib.delay_line(N=9,DELAY=3)
 Compiling module xil_defaultlib.YCrCb_submod(B1=0)
 Compiling module xil_defaultlib.YCrCb_submod(B1=9'b010000000)
+Compiling module xil_defaultlib.register(N=3)
+Compiling module xil_defaultlib.delay_line(N=3,DELAY=5)
 Compiling module xil_defaultlib.YCrCb_module
 Compiling module xil_defaultlib.vp
 Compiling module xil_defaultlib.hdmi_out
