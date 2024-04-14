@@ -83,18 +83,20 @@ Cr_submod
     .y(pixel_out[7:0])
 );
 
-delay_line #
-(
-    .N(3),
-    .DELAY(5)
-)
-del_sync
-(
-    .clk(clk),
-    .ce(de_in),
-    .x({h_sync_in, v_sync_in, de_in}),
+//delay_line #
+//(
+//    .N(3),
+//    .DELAY(5)
+//)
+//del_sync
+//(
+//    .clk(clk),
+//    .ce(de_in),
+//    .x({h_sync_in, v_sync_in, de_in}),
     
-    .y({h_sync_out, v_sync_out, de_out})
-);
+//    .y({h_sync_out, v_sync_out, de_out})
+//);
+
+assign {h_sync_out, v_sync_out, de_out} = {h_sync_in, v_sync_in, de_in};
 
 endmodule

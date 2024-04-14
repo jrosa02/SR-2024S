@@ -36,11 +36,12 @@ module vp(
     );
 
 YCrCb_module conv(
+    .clk(clk),
+
     .pixel_in(pixel_in),
     .h_sync_in(h_sync_in),
     .v_sync_in(v_sync_in),
     .de_in(de_in),
-    .clk(clk),
     //input [2:0]sw,
     
     .pixel_out(pixel_out),
