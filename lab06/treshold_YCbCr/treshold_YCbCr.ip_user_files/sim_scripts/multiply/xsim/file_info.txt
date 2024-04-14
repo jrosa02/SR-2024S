@@ -1,0 +1,2 @@
+multiply.vhd,vhdl,xil_defaultlib,../../../../YCrCb_conv.gen/sources_1/ip/multiply/sim/multiply.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
