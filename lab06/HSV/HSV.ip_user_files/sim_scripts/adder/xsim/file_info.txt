@@ -1,0 +1,2 @@
+adder.vhd,vhdl,xil_defaultlib,../../../../YCrCb_conv.gen/sources_1/ip/adder/sim/adder.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

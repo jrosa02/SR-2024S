@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC84CBE19D7D4ADA9",
+      "boundary_crc": "0xA9F915D9D0D07909",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../treshold_YCbCr.gen/sources_1/bd/hdmi_vga",
       "name": "hdmi_vga",
@@ -133,6 +133,11 @@
             "value_src": "default"
           }
         }
+      },
+      "sw": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
       }
     },
     "components": {
@@ -387,6 +392,12 @@
         "ports": [
           "rgb2vga_0/vga_pVSync",
           "vga_pVSync"
+        ]
+      },
+      "sw_1": {
+        "ports": [
+          "sw",
+          "vp_0/sw"
         ]
       },
       "sys_clock_1": {

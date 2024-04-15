@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Sun Apr 14 22:29:18 2024
+//Date        : Mon Apr 15 09:59:26 2024
 //Host        : DellInspiron running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi_vga.bd
 //Design      : hdmi_vga
@@ -23,6 +23,7 @@ module hdmi_vga
     hdmi_in_ddc_sda_o,
     hdmi_in_ddc_sda_t,
     hdmi_out_en,
+    sw,
     sys_clock,
     vga_pBlue,
     vga_pGreen,
@@ -41,6 +42,7 @@ module hdmi_vga
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_O" *) output hdmi_in_ddc_sda_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_T" *) output hdmi_in_ddc_sda_t;
   output [0:0]hdmi_out_en;
+  input [2:0]sw;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN hdmi_vga_sys_clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
   output [4:0]vga_pBlue;
   output [5:0]vga_pGreen;
@@ -69,6 +71,7 @@ module hdmi_vga
   wire rgb2vga_0_vga_pHSync;
   wire [4:0]rgb2vga_0_vga_pRed;
   wire rgb2vga_0_vga_pVSync;
+  wire [2:0]sw_1;
   wire sys_clock_1;
   wire vp_0_de_out;
   wire vp_0_h_sync_out;
@@ -89,6 +92,7 @@ module hdmi_vga
   assign hdmi_in_ddc_sda_o = dvi2rgb_0_DDC_SDA_O;
   assign hdmi_in_ddc_sda_t = dvi2rgb_0_DDC_SDA_T;
   assign hdmi_out_en[0] = xlconstant_1_dout;
+  assign sw_1 = sw[2:0];
   assign sys_clock_1 = sys_clock;
   assign vga_pBlue[4:0] = rgb2vga_0_vga_pBlue;
   assign vga_pGreen[5:0] = rgb2vga_0_vga_pGreen;
@@ -136,7 +140,7 @@ module hdmi_vga
         .h_sync_out(vp_0_h_sync_out),
         .pixel_in(dvi2rgb_0_vid_pData),
         .pixel_out(vp_0_pixel_out),
-        .sw({1'b0,1'b0,1'b0}),
+        .sw(sw_1),
         .v_sync_in(dvi2rgb_0_vid_pVSync),
         .v_sync_out(vp_0_v_sync_out));
   hdmi_vga_xlconstant_0_0 xlconstant_0
