@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../mass_centroid.gen/sources_1/ip/sub_cordinates/sim/sub_cordinates.vhd" \
+
+nosort

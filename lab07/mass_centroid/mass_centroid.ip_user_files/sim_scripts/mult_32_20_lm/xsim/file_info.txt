@@ -1,0 +1,2 @@
+mult_32_20_lm.vhd,vhdl,xil_defaultlib,../../../../mass_centroid.gen/sources_1/ip/mult_32_20_lm/sim/mult_32_20_lm.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

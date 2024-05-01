@@ -1,0 +1,10 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+zdj/out  0.ppm saved
+Stopped at time : 2018 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sim_1/imports/tb_src/hdmi_out.v" Line 45
+zdj/out  1.ppm saved
+Stopped at time : 16128 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sim_1/imports/tb_src/hdmi_out.v" Line 45
+zdj/out  2.ppm saved
+Stopped at time : 30238 ns : File "C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sim_1/imports/tb_src/hdmi_out.v" Line 45

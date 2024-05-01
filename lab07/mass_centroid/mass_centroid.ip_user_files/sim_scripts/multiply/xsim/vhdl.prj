@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../YCrCb_conv.gen/sources_1/ip/multiply/sim/multiply.vhd" \
+
+nosort

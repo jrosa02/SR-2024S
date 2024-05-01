@@ -1,0 +1,2 @@
+add3.vhd,vhdl,xil_defaultlib,../../../../mass_centroid.gen/sources_1/ip/add3/sim/add3.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
