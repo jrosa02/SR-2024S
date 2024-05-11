@@ -20,12 +20,12 @@ module hdmi_in
 //-----------------------------------------------
 //for now supports VGA 640x480 60Hz only
   //horizontal
-  parameter hr=64; //resolution
+  parameter hr=1280; //resolution
   parameter hbp=8; //back porch
   parameter hfp=8; //front porch
   parameter hs=2;  //sync len
   //vertical
-  parameter vr=64; //resolution
+  parameter vr=720; //resolution
   parameter vbp=8; //back porch
   parameter vfp=8; //front porch
   parameter vs=4;   //sync len
@@ -38,7 +38,7 @@ module hdmi_in
   reg h_enable=1'b0;
   reg v_enable=1'b0;
   reg [10:0]hcounter=0;
-  reg [10:0]vcounter=64+1;//480+7
+  reg [10:0]vcounter=720+1;//480+7
 //-----------------------------------------------
   reg [7:0]red;
   reg [7:0]green;
@@ -119,7 +119,7 @@ begin
 	 //TB only
 	 vsc=vsc+1;
 
-    rgbfile = $fopen("C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/hand64.ppm","rb");
+    rgbfile = $fopen("C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/hand128.ppm","rb");
 
 	 // read header file
 	 for(i=0;i<13;i=i+1)

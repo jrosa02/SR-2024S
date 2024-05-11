@@ -56,12 +56,12 @@ wire v_sync_box_out;
 wire [23:0]pixel_box_out;
 
 wire [19:0]m00_w;
-wire [19:0]m10_w;
-wire [19:0]m01_w;
+wire [31:0]m10_w;
+wire [31:0]m01_w;
 
 reg [19:0]m00_r = 0;
-reg [19:0]m01_r = 0;
-reg [19:0]m10_r = 0;
+reg [31:0]m01_r = 0;
+reg [31:0]m10_r = 0;
 
 wire [10:0]x_min;
 wire [10:0]x_max;
@@ -139,7 +139,7 @@ divider_32_20 div_mx
 (
   .clk(clk),
   .start(eof),
-  .dividend({12'h000 ,m01_r}),
+  .dividend(m01_r),
   .divisor(m00_r),
   .quotient(centre_x)
   //.qv()
@@ -199,9 +199,26 @@ draw_rectangle draw_bound_box(
 //assign v_sync_out = v_sync_count_out;
 //assign pixel_out = (x_ind==centre_x || y_ind==centre_y) ? 24'hFF0000:pixel_count_out;
 
-assign de_out = de_box_out;
-assign h_sync_out = h_sync_box_out;
-assign v_sync_out = v_sync_box_out;
-assign pixel_out = (x_ind==centre_x || y_ind==centre_y) ? 24'hFF0000:pixel_box_out;
+draw_circle circle_drawer(
+    .clk(clk),
+    .de_in(de_box_out),
+    .h_sync_in(h_sync_box_out),
+    .v_sync_in(v_sync_box_out),
+    .pixel_in(pixel_box_out),
+    .centre_x(centre_x),
+    .centre_y(centre_y),
+    .x_ind(x_ind),
+    .y_ind(y_ind),
+    
+    .h_sync_out(h_sync_out),
+    .v_sync_out(v_sync_out),
+    .de_out(de_out),
+    .pixel_out(pixel_out)
+    );
+    //or cross
+//assign de_out = de_box_out;
+//assign h_sync_out = h_sync_box_out;
+//assign v_sync_out = v_sync_box_out;
+//assign pixel_out = (x_ind==centre_x || y_ind==centre_y) ? 24'hFF0000:pixel_box_out;
 
 endmodule

@@ -3,14 +3,17 @@
 
 # XDC: imports/hdmi_vga_zybo_src/Zybo_HDMI.xdc
 
+# IP: ip/mult_32_20_lm/mult_32_20_lm.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mult_32_20_lm || ORIG_REF_NAME==mult_32_20_lm} -quiet] -quiet
+
+# IP: ip/dist_mem_gen_0/dist_mem_gen_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dist_mem_gen_0 || ORIG_REF_NAME==dist_mem_gen_0} -quiet] -quiet
+
 # IP: ip/adder/adder.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adder || ORIG_REF_NAME==adder} -quiet] -quiet
 
 # IP: ip/multiply/multiply.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==multiply || ORIG_REF_NAME==multiply} -quiet] -quiet
-
-# IP: ip/dist_mem_gen_0/dist_mem_gen_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dist_mem_gen_0 || ORIG_REF_NAME==dist_mem_gen_0} -quiet] -quiet
 
 # Block Designs: bd/hdmi_vga/hdmi_vga.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_vga || ORIG_REF_NAME==hdmi_vga} -quiet] -quiet
@@ -33,17 +36,29 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_vga_xl
 # IP: bd/hdmi_vga/ip/hdmi_vga_vp_0_0/hdmi_vga_vp_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_vga_vp_0_0 || ORIG_REF_NAME==hdmi_vga_vp_0_0} -quiet] -quiet
 
+# IP: ip/dist_mem_gen_1_1/dist_mem_gen_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dist_mem_gen_1 || ORIG_REF_NAME==dist_mem_gen_1} -quiet] -quiet
+
+# IP: ip/add3/add3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==add3 || ORIG_REF_NAME==add3} -quiet] -quiet
+
+# IP: ip/sub_cordinates/sub_cordinates.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==sub_cordinates || ORIG_REF_NAME==sub_cordinates} -quiet] -quiet
+
 # IP: ip/c_addsub_0/c_addsub_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_addsub_0 || ORIG_REF_NAME==c_addsub_0} -quiet] -quiet
+
+# IP: ip/mult_32_20_lm/mult_32_20_lm.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mult_32_20_lm || ORIG_REF_NAME==mult_32_20_lm} -quiet] -quiet
+
+# IP: ip/dist_mem_gen_0/dist_mem_gen_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dist_mem_gen_0 || ORIG_REF_NAME==dist_mem_gen_0} -quiet] -quiet
 
 # IP: ip/adder/adder.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adder || ORIG_REF_NAME==adder} -quiet] -quiet
 
 # IP: ip/multiply/multiply.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==multiply || ORIG_REF_NAME==multiply} -quiet] -quiet
-
-# IP: ip/dist_mem_gen_0/dist_mem_gen_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dist_mem_gen_0 || ORIG_REF_NAME==dist_mem_gen_0} -quiet] -quiet
 
 # XDC: c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc
 

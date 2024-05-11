@@ -70,7 +70,15 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache C:/Users/janro/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19412-DellInspiron/incrSyn
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -94,6 +102,7 @@ OPTRACE "Adding files" START { }
 add_files C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/imports/LUTsss/lut.coe
 add_files C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/imports/SR-2024S/lab05/LUTsss/lut.coe
 add_files C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/imports/SR-2024S/lab06/treshold_YCbCr/lut.coe
+add_files C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/circle.coe
 read_verilog -library xil_defaultlib C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/imports/hdmi_vga_wrapper.v
 add_files C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/bd/hdmi_vga/hdmi_vga.bd
 set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/ip/hdmi_vga_dvi2rgb_0_0/src/ila_refclk/ila_v6_2/constraints/ila.xdc]
@@ -110,6 +119,15 @@ set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/
 set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/hdmi_vga_ooc.xdc]
 
 read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/c_addsub_0/c_addsub_0.xci
+
+read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/sub_cordinates/sub_cordinates.xci
+set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/sub_cordinates/sub_cordinates_ooc.xdc]
+
+read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/add3/add3.xci
+set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/add3/add3_ooc.xdc]
+
+read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/dist_mem_gen_1_1/dist_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/dist_mem_gen_1_1/dist_mem_gen_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

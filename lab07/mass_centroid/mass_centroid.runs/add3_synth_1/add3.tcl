@@ -70,7 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "add3_synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache C:/Users/janro/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19412-DellInspiron/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -93,7 +98,7 @@ set_property ip_output_repo c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/add3/add3.xci
+read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/add3/add3.xci
 set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/add3/add3_ooc.xdc]
 
 OPTRACE "Adding files" END { }

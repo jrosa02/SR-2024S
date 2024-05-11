@@ -25,11 +25,11 @@ module accum(
     input clk,
     input ce,
     input rst,
-    output [19:0] Y
+    output [31:0] Y
     );
     
-    wire [19:0]feedback;
-    wire [19:0]A2r;
+    wire [31:0]feedback;
+    wire [31:0]A2r;
     
     c_addsub_0 cumm
     (
@@ -42,7 +42,7 @@ module accum(
     
     register #
     (
-        .N(20)
+        .N(32)
     )
     reggi
     (

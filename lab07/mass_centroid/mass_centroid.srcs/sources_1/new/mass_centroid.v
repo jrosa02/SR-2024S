@@ -36,8 +36,8 @@ module mass_centroid(
 
 centroid #
 (
-    .IMG_H(64),
-    .IMG_W(64)
+    .IMG_H(720),
+    .IMG_W(1280)
 )
 centroid_ent
 (

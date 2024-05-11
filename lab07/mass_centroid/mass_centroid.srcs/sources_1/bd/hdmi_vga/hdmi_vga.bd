@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCE0E81AF1204A1BA",
+      "boundary_crc": "0xA9F915D9D0D07909",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../mass_centroid.gen/sources_1/bd/hdmi_vga",
       "name": "hdmi_vga",
@@ -123,7 +123,7 @@
       },
       "sw": {
         "direction": "I",
-        "left": "3",
+        "left": "2",
         "right": "0"
       }
     },
@@ -273,7 +273,7 @@
           },
           "sw": {
             "direction": "I",
-            "left": "3",
+            "left": "2",
             "right": "0"
           },
           "pixel_out": {

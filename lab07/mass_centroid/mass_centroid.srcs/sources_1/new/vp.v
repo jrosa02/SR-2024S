@@ -27,7 +27,7 @@ module vp(
     input de_in,
     input clk,
     
-    input [3:0]sw,
+    input [2:0]sw,
     
     output [23:0]pixel_out,
     output h_sync_out,

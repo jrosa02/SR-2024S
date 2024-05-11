@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Mon Apr 29 12:39:21 2024
+//Date        : Mon May  6 11:07:24 2024
 //Host        : DellInspiron running 64-bit major release  (build 9200)
 //Command     : generate_target hdmi_vga_wrapper.bd
 //Design      : hdmi_vga_wrapper
@@ -33,7 +33,7 @@ module hdmi_vga_wrapper
   inout hdmi_in_ddc_scl_io;
   inout hdmi_in_ddc_sda_io;
   output [0:0]hdmi_out_en;
-  input [3:0]sw;
+  input [2:0]sw;
   input sys_clock;
   output [4:0]vga_pBlue;
   output [5:0]vga_pGreen;
@@ -55,7 +55,7 @@ module hdmi_vga_wrapper
   wire hdmi_in_ddc_sda_o;
   wire hdmi_in_ddc_sda_t;
   wire [0:0]hdmi_out_en;
-  wire [3:0]sw;
+  wire [2:0]sw;
   wire sys_clock;
   wire [4:0]vga_pBlue;
   wire [5:0]vga_pGreen;

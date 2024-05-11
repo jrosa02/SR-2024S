@@ -134,7 +134,7 @@ BEGIN
       C_CE_OVERRIDES_SCLR => 0,
       C_A_TYPE => 0,
       C_B_TYPE => 0,
-      C_LATENCY => 1,
+      C_LATENCY => 2,
       C_ADD_MODE => 0,
       C_B_CONSTANT => 1,
       C_B_VALUE => "000000000011",

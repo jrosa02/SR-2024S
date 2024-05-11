@@ -54,7 +54,8 @@
 COMPONENT dist_mem_gen_1
   PORT (
     a : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-    spo : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) 
+    clk : IN STD_LOGIC;
+    qspo : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) 
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -66,7 +67,8 @@ END COMPONENT;
 your_instance_name : dist_mem_gen_1
   PORT MAP (
     a => a,
-    spo => spo
+    clk => clk,
+    qspo => qspo
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

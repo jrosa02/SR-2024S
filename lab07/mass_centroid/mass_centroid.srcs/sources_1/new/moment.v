@@ -26,7 +26,7 @@ module moment(
     input mask,
     input [10:0]mult,
         
-    output [19:0]value
+    output [31:0]value
     );
     
     accum moment_accum(

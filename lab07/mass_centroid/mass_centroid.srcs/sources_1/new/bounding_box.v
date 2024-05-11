@@ -40,14 +40,14 @@ module bounding_box #
 );
     
     wire mask = pixel_in[0];
-    reg [10:0]x_min_r = IMG_W+1;
+    reg [10:0]x_min_r = IMG_W-1;
     reg [10:0]x_max_r = 0;
-    reg [10:0]y_min_r = IMG_H+1;
+    reg [10:0]y_min_r = IMG_H-1;
     reg [10:0]y_max_r = 0;
     
-    reg [10:0]x_min_r_out = IMG_W+1;
+    reg [10:0]x_min_r_out = IMG_W-1;
     reg [10:0]x_max_r_out = 0;
-    reg [10:0]y_min_r_out = IMG_H+1;
+    reg [10:0]y_min_r_out = IMG_H-1;
     reg [10:0]y_max_r_out = 0;
     
     reg prev_eof = 0;
@@ -68,9 +68,9 @@ module bounding_box #
         end
         
         if (prev_eof) begin
-            x_min_r <= IMG_W+1;
+            x_min_r <= IMG_W-1;
             x_max_r <= 0;
-            y_min_r <= IMG_H+1;
+            y_min_r <= IMG_H-1;
             y_max_r <= 0;
         end
     end //always

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="sub_cordinates_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1714478073">
   <File Type="PA-TCL" Name="sub_cordinates.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="sub_cordinates_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="sub_cordinates_reports.tcl"/>
   <File Type="RDS-RDS" Name="sub_cordinates.vds"/>
   <File Type="RDS-UTIL" Name="sub_cordinates_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="sub_cordinates_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="sub_cordinates.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sub_cordinates_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="sub_cordinates_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/sub_cordinates">
     <File Path="$PSRCDIR/sources_1/ip/sub_cordinates/sub_cordinates.xci">
       <FileInfo>
@@ -52,9 +49,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
