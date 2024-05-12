@@ -6,4 +6,5 @@ WARNING: This core is supplied with a behavioral model. To model cycle-accurate 
 WARNING in tb_hdmi.vp_i.ms_centroid.centroid_ent.circle_drawer.circle_getter.circle_mem.inst at time                    0 ns: 
 Reading from out-of-range address. Max address in tb_hdmi.vp_i.ms_centroid.centroid_ent.circle_drawer.circle_getter.circle_mem.inst is          63
 zdj/out  0.ppm saved
-INFO: xsimkernel Simulation Memory Usage: 20768 KB (Peak: 20768 KB), Simulation CPU Usage: 128234 ms
+zdj/out  1.ppm saved
+zdj/out  2.ppm saved
