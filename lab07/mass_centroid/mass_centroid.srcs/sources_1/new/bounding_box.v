@@ -67,6 +67,8 @@ module bounding_box #
             y_max_r_out <= y_max_r;
         end
         
+        prev_eof <= eof;
+        
         if (prev_eof) begin
             x_min_r <= IMG_W-1;
             x_max_r <= 0;

@@ -38,8 +38,9 @@ module contextNxN #
     output de_mid,
     
     output [N*N - 1:0]de_context,
+    output [N*N - 1:0]h_sync_context,
+    output [N*N - 1:0]v_sync_context,
     output [N*N - 1:0]context_out,
-    
     
     output mask_out,
     output h_sync_out,
@@ -90,7 +91,11 @@ generate
                 .y(conectors[n_h][n_v+1]),
                 .ce(1)
             );
+            
+             
              assign de_context[5*n_h + n_v] = conectors[n_h][n_v+1][3];
+             assign h_sync_context[5*n_h + n_v] = conectors[n_h][n_v+1][1];
+             assign v_sync_context[5*n_h + n_v] = conectors[n_h][n_v+1][2];
              assign context_out[5*n_h + n_v] = conectors[n_h][n_v+1][0];
         end
     end
