@@ -3,7 +3,7 @@
    "Default View_ScaleFactor":"0.775674",
    "Default View_TopLeft":"-116,-53",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port hdmi_in -pg 1 -lvl 0 -x -10 -y 170 -defaultsOSRD
 preplace port hdmi_in_ddc -pg 1 -lvl 5 -x 1140 -y 220 -defaultsOSRD

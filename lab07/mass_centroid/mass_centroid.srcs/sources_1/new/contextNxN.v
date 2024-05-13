@@ -33,19 +33,15 @@ module contextNxN #
     input de_in,
     input clk,
     
-    output h_sync_mid,
-    output v_sync_mid,
-    output de_mid,
-    
     output [N*N - 1:0]de_context,
     output [N*N - 1:0]h_sync_context,
     output [N*N - 1:0]v_sync_context,
-    output [N*N - 1:0]context_out,
+    output [N*N - 1:0]context_out
     
-    output mask_out,
-    output h_sync_out,
-    output v_sync_out,
-    output de_out
+//    output mask_out,
+//    output h_sync_out,
+//    output v_sync_out,
+//    output de_out
     );
     
 wire [4-1:0]conectors[N-1:0][N:0];
@@ -57,8 +53,7 @@ genvar n_h;
 generate
 
     assign conectors[0][0] = {mask_in, h_sync_in, v_sync_in, de_in};
-    assign {_, h_sync_mid, v_sync_mid, de_mid} = conectors[2][3];
-    assign {mask_out, h_sync_out, v_sync_out, de_out} = conectors[N-1][N];
+    //assign {mask_out, h_sync_out, v_sync_out, de_out} = conectors[N-1][N];
     
     
     //assign de_frame = &conectors[:][:][3];
