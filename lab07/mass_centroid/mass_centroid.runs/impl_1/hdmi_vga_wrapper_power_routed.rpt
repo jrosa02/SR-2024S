@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Fri May 24 18:18:04 2024
+| Date             : Fri May 24 19:21:59 2024
 | Host             : DellInspiron running 64-bit major release  (build 9200)
 | Command          : report_power -file hdmi_vga_wrapper_power_routed.rpt -pb hdmi_vga_wrapper_power_summary_routed.pb -rpx hdmi_vga_wrapper_power_routed.rpx
 | Design           : hdmi_vga_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.400        |
+| Total On-Chip Power (W)  | 0.394        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.303        |
+| Dynamic (W)              | 0.297        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.4         |
-| Junction Temperature (C) | 29.6         |
+| Max Ambient (C)          | 80.5         |
+| Junction Temperature (C) | 29.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,9 +52,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.035 |        9 |       --- |             --- |
-| Slice Logic              |     0.012 |    11819 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     3418 |     17600 |           19.42 |
+| Clocks                   |     0.034 |        9 |       --- |             --- |
+| Slice Logic              |     0.012 |    11801 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     3406 |     17600 |           19.35 |
 |   Register               |     0.001 |     5809 |     35200 |           16.50 |
 |   LUT as Shift Register  |    <0.001 |      328 |      6000 |            5.47 |
 |   CARRY4                 |    <0.001 |      176 |      4400 |            4.00 |
@@ -63,14 +63,14 @@ Table of Contents
 |   Others                 |    <0.001 |      968 |       --- |             --- |
 |   F7/F8 Muxes            |    <0.001 |       63 |     17600 |            0.36 |
 |   BUFR                   |     0.000 |        1 |        56 |            1.79 |
-| Signals                  |     0.015 |     8782 |       --- |             --- |
+| Signals                  |     0.015 |     8750 |       --- |             --- |
 | Block RAM                |     0.002 |      5.5 |        60 |            9.17 |
 | MMCM                     |     0.062 |        1 |         2 |           50.00 |
 | PLL                      |     0.110 |        1 |         2 |           50.00 |
 | DSPs                     |     0.008 |       29 |        80 |           36.25 |
-| I/O                      |     0.059 |       34 |       100 |           34.00 |
+| I/O                      |     0.054 |       34 |       100 |           34.00 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.400 |          |           |                 |
+| Total                    |     0.394 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,9 +80,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.090 |       0.085 |      0.004 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.113 |       0.107 |      0.006 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.009 |       0.008 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.089 |       0.084 |      0.004 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.112 |       0.107 |      0.006 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -162,15 +162,15 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| hdmi_vga_wrapper         |     0.303 |
+| hdmi_vga_wrapper         |     0.297 |
 |   dbg_hub                |     0.005 |
 |     inst                 |     0.005 |
 |       BSCANID.u_xsdbm_id |     0.005 |
-|   hdmi_vga_i             |     0.271 |
+|   hdmi_vga_i             |     0.270 |
 |     clk_wiz_0            |     0.110 |
 |       inst               |     0.110 |
-|     dvi2rgb_0            |     0.138 |
-|       U0                 |     0.138 |
+|     dvi2rgb_0            |     0.137 |
+|       U0                 |     0.137 |
 |     vp_0                 |     0.022 |
 |       inst               |     0.022 |
 +--------------------------+-----------+

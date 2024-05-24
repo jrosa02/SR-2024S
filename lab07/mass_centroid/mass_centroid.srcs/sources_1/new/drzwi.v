@@ -75,8 +75,8 @@ always @(posedge clk) begin
             else pixel_reg <= 24'h000000;
         end 
         else begin
-            if(&context) pixel_reg <=24'h000000;
-            else pixel_reg <= 24'hFFFFFF;
+            if(&context) pixel_reg <=24'hFFFFFF;
+            else pixel_reg <= 24'h000000;
         end
     end
     

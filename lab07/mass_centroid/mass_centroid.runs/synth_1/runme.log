@@ -10,13 +10,13 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source hdmi_vga_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1002.605 ; gain = 118.578
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1002.891 ; gain = 118.598
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab05/hdmi_vga_zybo/vivado-library'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.cache/ip 
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1068.199 ; gain = 37.539
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1068.211 ; gain = 37.488
 Command: read_checkpoint -auto_incremental -incremental C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/utils_1/imports/synth_1/hdmi_vga_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/utils_1/imports/synth_1/hdmi_vga_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,26 +29,26 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2756
+INFO: [Synth 8-7075] Helper process launched with PID 15268
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1866.383 ; gain = 408.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1866.270 ; gain = 408.672
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_wrapper' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/imports/hdmi_vga_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_vga' [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/synth/hdmi_vga.v:12]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_clk_wiz_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_clk_wiz_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_dvi2rgb_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_dvi2rgb_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_dvi2rgb_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_dvi2rgb_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_clk_wiz_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_clk_wiz_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_dvi2rgb_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_dvi2rgb_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_dvi2rgb_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_dvi2rgb_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'aPixelClkLckd' of module 'hdmi_vga_dvi2rgb_0_0' is unconnected for instance 'dvi2rgb_0' [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/synth/hdmi_vga.v:105]
 WARNING: [Synth 8-7071] port 'pLocked' of module 'hdmi_vga_dvi2rgb_0_0' is unconnected for instance 'dvi2rgb_0' [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/synth/hdmi_vga.v:105]
 WARNING: [Synth 8-7023] instance 'dvi2rgb_0' of module 'hdmi_vga_dvi2rgb_0_0' has 20 connections declared, but only 18 given [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/synth/hdmi_vga.v:105]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_rgb2vga_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_rgb2vga_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_rgb2vga_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_rgb2vga_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_vp_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_vp_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_vp_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-8768-DellInspiron/realtime/hdmi_vga_vp_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_rgb2vga_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_rgb2vga_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_rgb2vga_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_rgb2vga_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_vp_0_0' [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_vp_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_vp_0_0' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/.Xil/Vivado-6040-DellInspiron/realtime/hdmi_vga_vp_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_vga_xlconstant_0_0' [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/ip/hdmi_vga_xlconstant_0_0/synth/hdmi_vga_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -60,18 +60,18 @@ INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_xlconstant_1_0' (0#1) [c
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga' (0#1) [c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/bd/hdmi_vga/synth/hdmi_vga.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_vga_wrapper' (0#1) [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/imports/hdmi_vga_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1959.312 ; gain = 501.438
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1959.793 ; gain = 502.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1959.312 ; gain = 501.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 1959.793 ; gain = 502.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1959.312 ; gain = 501.438
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 1959.793 ; gain = 502.195
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1959.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1959.793 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -94,25 +94,25 @@ Parsing XDC File [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/m
 Finished Parsing XDC File [C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1962.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.793 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1962.812 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1959.793 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_vga_i/vp_0' at clock pin 'clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 1963.520 ; gain = 505.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 1963.520 ; gain = 505.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -143,10 +143,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for hdmi_vga_i/xlconstant_0. (constra
 Applied set_property KEEP_HIERARCHY = SOFT for hdmi_vga_i/xlconstant_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hdmi_vga_i/vp_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 1963.520 ; gain = 505.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 1963.520 ; gain = 505.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -169,25 +169,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:37 . Memory (MB): peak = 1963.520 ; gain = 505.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:48 . Memory (MB): peak = 1965.551 ; gain = 507.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 1966.848 ; gain = 508.973
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:48 . Memory (MB): peak = 1965.551 ; gain = 507.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 1975.957 ; gain = 518.082
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:48 . Memory (MB): peak = 1978.715 ; gain = 521.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -205,37 +205,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -264,18 +264,18 @@ Report Cell Usage:
 |7     |OBUF               |    20|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:54 . Memory (MB): peak = 1976.770 ; gain = 511.359
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 1976.770 ; gain = 518.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:54 . Memory (MB): peak = 1982.484 ; gain = 521.160
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 1982.484 ; gain = 524.887
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1976.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1982.484 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1993.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1998.215 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
@@ -284,9 +284,7 @@ Synth Design complete, checksum: 10b5526c
 INFO: [Common 17-83] Releasing license: Synthesis
 50 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:01:11 . Memory (MB): peak = 1993.473 ; gain = 911.496
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:01:09 . Memory (MB): peak = 1998.215 ; gain = 916.422
 INFO: [Common 17-1381] The checkpoint 'C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.runs/synth_1/hdmi_vga_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_vga_wrapper_utilization_synth.rpt -pb hdmi_vga_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May 24 18:11:47 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri May 24 19:15:42 2024...
