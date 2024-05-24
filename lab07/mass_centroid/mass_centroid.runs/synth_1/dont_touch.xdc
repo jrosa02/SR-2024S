@@ -36,6 +36,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_vga_xl
 # IP: bd/hdmi_vga/ip/hdmi_vga_vp_0_0/hdmi_vga_vp_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_vga_vp_0_0 || ORIG_REF_NAME==hdmi_vga_vp_0_0} -quiet] -quiet
 
+# IP: ip/delayLineBRAM/delayLineBRAM.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==delayLineBRAM || ORIG_REF_NAME==delayLineBRAM} -quiet] -quiet
+
 # IP: ip/dist_mem_gen_1_1/dist_mem_gen_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dist_mem_gen_1 || ORIG_REF_NAME==dist_mem_gen_1} -quiet] -quiet
 

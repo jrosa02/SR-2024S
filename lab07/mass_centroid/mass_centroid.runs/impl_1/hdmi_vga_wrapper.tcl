@@ -115,10 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -127,9 +124,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/janro/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4704-DellInspiron/incrSyn
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
@@ -160,6 +155,7 @@ OPTRACE "add files" START { }
   read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/sub_cordinates/sub_cordinates.xci
   read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/add3/add3.xci
   read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/dist_mem_gen_1_1/dist_mem_gen_1.xci
+  read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/constrs_1/imports/hdmi_vga_zybo_src/Zybo_HDMI.xdc

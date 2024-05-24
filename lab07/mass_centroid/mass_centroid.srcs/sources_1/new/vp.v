@@ -35,6 +35,8 @@ module vp(
     output de_out
     );
     
+wire [23:0]pixel_in_RGB = {pixel_in[23:16], pixel_in[7:0], pixel_in[15:8]};
+    
 wire [23:0]pix_mux[7:0];
 wire de_mux[7:0];
 wire h_sync_mux[7:0];
@@ -82,6 +84,27 @@ always @(posedge clk) begin
             h_sync_reg <= h_sync_mux[4];
             v_sync_reg <= v_sync_mux[4];
         end
+        3'b101:
+        begin
+            pix_reg <= pix_mux[5];
+            de_reg <= de_mux[5];
+            h_sync_reg <= h_sync_mux[5];
+            v_sync_reg <= v_sync_mux[5];
+        end
+        3'b110:
+        begin
+            pix_reg <= pix_mux[6];
+            de_reg <= de_mux[6];
+            h_sync_reg <= h_sync_mux[6];
+            v_sync_reg <= v_sync_mux[6];
+        end
+        3'b111:
+        begin
+            pix_reg <= pix_mux[6];
+            de_reg <= de_mux[6];
+            h_sync_reg <= h_sync_mux[6];
+            v_sync_reg <= v_sync_mux[6];
+        end
         default:
         begin
             pix_reg <= pix_mux[0];
@@ -94,7 +117,7 @@ always @(posedge clk) begin
 end //always
 
  // normal
-assign pix_mux[0] = pixel_in;
+assign pix_mux[0] = pixel_in_RGB;
 assign h_sync_mux[0] = h_sync_in;
 assign v_sync_mux[0] = v_sync_in;
 assign de_mux[0] = de_in;
@@ -103,7 +126,7 @@ assign de_mux[0] = de_in;
 YCrCb_module conv(
     .clk(clk),
 
-    .pixel_in(pixel_in),
+    .pixel_in(pixel_in_RGB),
     .h_sync_in(h_sync_in),
     .v_sync_in(v_sync_in),
     .de_in(de_in),
@@ -120,7 +143,7 @@ LUTs lust
 (
     .clk(clk),
 
-    .pixel_in(pixel_in),
+    .pixel_in(pixel_in_RGB),
     .h_sync_in(h_sync_in),
     .v_sync_in(v_sync_in),
     .de_in(de_in),
@@ -160,9 +183,39 @@ mass_centroid ms_centroid(
     .v_sync_out(v_sync_mux[4]),
     .de_out(de_mux[4])
     );
+    
+//median filter of binarized YCbCr
+median_filter median(
+    .clk(clk),
+    //input from tresholding otput
+    .pixel_in(pix_mux[3]),
+    .h_sync_in(h_sync_mux[3]),
+    .v_sync_in(v_sync_mux[3]),
+    .de_in(de_mux[3]),
+    
+    .pixel_out(pix_mux[5]),
+    .h_sync_out(h_sync_mux[5]),
+    .v_sync_out(v_sync_mux[5]),
+    .de_out(de_mux[5])
+    );
+    
+otwzamk otwierac(
+    .clk(clk),
+    //input from tresholding otput
+    .pixel_in(pix_mux[3]),
+    .h_sync_in(h_sync_mux[3]),
+    .v_sync_in(v_sync_mux[3]),
+    .de_in(de_mux[3]),
+    .zamk(sw[0]),
+    
+    .pixel_out(pix_mux[6]),
+    .h_sync_out(h_sync_mux[6]),
+    .v_sync_out(v_sync_mux[6]),
+    .de_out(de_mux[6])
+    );
 
 //out
-assign pixel_out = pix_reg;
+assign pixel_out = {pix_reg[23:16], pix_reg[7:0], pix_reg[15:8]};
 assign h_sync_out = h_sync_reg;
 assign v_sync_out = v_sync_reg;
 assign de_out = de_reg;

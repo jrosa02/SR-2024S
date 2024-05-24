@@ -37,11 +37,6 @@ module contextNxN #
     output [N*N - 1:0]h_sync_context,
     output [N*N - 1:0]v_sync_context,
     output [N*N - 1:0]context_out
-    
-//    output mask_out,
-//    output h_sync_out,
-//    output v_sync_out,
-//    output de_out
     );
     
 wire [4-1:0]conectors[N-1:0][N:0];
@@ -53,16 +48,13 @@ genvar n_h;
 generate
 
     assign conectors[0][0] = {mask_in, h_sync_in, v_sync_in, de_in};
-    //assign {mask_out, h_sync_out, v_sync_out, de_out} = conectors[N-1][N];
-    
-    
-    //assign de_frame = &conectors[:][:][3];
     
     delayLinieBRAM_WP#
     (
     .WIDTH(16),
     .BRAM_SIZE_W(13)
     )
+    brama
    (
     .clk(clk),
     .rst(0),
@@ -87,11 +79,10 @@ generate
                 .ce(1)
             );
             
-             
-             assign de_context[5*n_h + n_v] = conectors[n_h][n_v+1][3];
-             assign h_sync_context[5*n_h + n_v] = conectors[n_h][n_v+1][1];
-             assign v_sync_context[5*n_h + n_v] = conectors[n_h][n_v+1][2];
-             assign context_out[5*n_h + n_v] = conectors[n_h][n_v+1][0];
+             assign context_out[5*n_h + n_v] = conectors[n_h][n_v+1][3];
+             assign v_sync_context[5*n_h + n_v] = conectors[n_h][n_v+1][1];
+             assign h_sync_context[5*n_h + n_v] = conectors[n_h][n_v+1][2];
+             assign de_context[5*n_h + n_v] = conectors[n_h][n_v+1][0];
         end
     end
 

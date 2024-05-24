@@ -71,14 +71,9 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/janro/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4704-DellInspiron/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -128,6 +123,9 @@ set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/
 
 read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/dist_mem_gen_1_1/dist_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/dist_mem_gen_1_1/dist_mem_gen_1_ooc.xdc]
+
+read_ip -quiet C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM.xci
+set_property used_in_implementation false [get_files -all c:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab07/mass_centroid/mass_centroid.gen/sources_1/ip/delayLineBRAM/delayLineBRAM_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

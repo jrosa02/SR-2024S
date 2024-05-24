@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Mon May 13 10:56:25 2024
+| Date         : Fri May 24 18:17:58 2024
 | Host         : DellInspiron running 64-bit major release  (build 9200)
 | Command      : report_methodology -file hdmi_vga_wrapper_methodology_drc_routed.rpt -pb hdmi_vga_wrapper_methodology_drc_routed.pb -rpx hdmi_vga_wrapper_methodology_drc_routed.rpx
 | Design       : hdmi_vga_wrapper
@@ -4951,102 +4951,102 @@ Related violations: <none>
 
 TIMING-17#981 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/prev_eof_reg/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/de_reg_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#982 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[0]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/fin_sum_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#983 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[10]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/fin_sum_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#984 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[1]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/fin_sum_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#985 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[2]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/fin_sum_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#986 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[3]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/fin_sum_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#987 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[4]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/h_sync_reg_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#988 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[5]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/BRAM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#989 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[6]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#990 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[7]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#991 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[8]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#992 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_out_reg[9]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#993 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[0]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#994 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[10]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#995 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[1]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#996 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[2]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#997 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[3]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#998 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[4]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#999 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[5]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#1000 Critical Warning
 Non-clocked sequential cell  
-The clock pin hdmi_vga_i/vp_0/inst/ms_centroid/centroid_ent/bound_box/x_max_r_reg[6]/C is not reached by a timing clock
+The clock pin hdmi_vga_i/vp_0/inst/median/median_context/brama/position_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 CKBF-1#1 Warning
@@ -5056,57 +5056,57 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X6Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X7Y71 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X4Y35 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X7Y73 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X4Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X8Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X5Y36 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X6Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X6Y35 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X4Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X7Y34 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X1Y70 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X7Y36 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X3Y71 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X8Y35 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X2Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X6Y33 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X1Y68 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X4Y33 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X2Y69 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X5Y34 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X0Y69 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-10#1 Warning
