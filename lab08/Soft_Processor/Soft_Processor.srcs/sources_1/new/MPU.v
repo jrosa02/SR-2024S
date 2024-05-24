@@ -59,7 +59,7 @@ module MPU(
     wire [8*8-1:0]registers = {r0, r1, r2, r3, r4, r5, r6, pc};
     
     //CYCLE
-    wire [8*8-1:0]next_registers = {r0, r1, r2, r3, r4, r5, r6, next_pc_addr};
+    //wire [8*8-1:0]next_registers = {r0, r1, r2, r3, r4, r5, r6, next_pc_addr};
     
     always @(posedge clk) begin
     
@@ -70,7 +70,7 @@ module MPU(
     PC_HANDLER mpu_pc_handler
     (
         .pc_addr(pc_addr),
-        .cmp_res(cmp_res),
+        .cmp_res(comp_res),
         .pc_op(pc_op),
         .alu_res(alu_res),
     
