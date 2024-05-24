@@ -1,0 +1,18 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Block Memory Generator module tb_hdmi.vp_i.median.median_context.brama.BRAM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module tb_hdmi.vp_i.otwierac.part_1.median_context.brama.BRAM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module tb_hdmi.vp_i.otwierac.part_2.median_context.brama.BRAM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING in tb_hdmi.vp_i.ms_centroid.centroid_ent.circle_drawer.circle_getter.circle_mem.inst at time                    0 ns: 
+Reading from out-of-range address. Max address in tb_hdmi.vp_i.ms_centroid.centroid_ent.circle_drawer.circle_getter.circle_mem.inst is          63
+zdj/out  0.ppm saved
+zdj/out  1.ppm saved
+zdj/out  2.ppm saved
+zdj/out  3.ppm saved
+zdj/out  4.ppm saved
+zdj/out  5.ppm saved
+zdj/out  6.ppm saved
+INFO: xsimkernel Simulation Memory Usage: 19800 KB (Peak: 19800 KB), Simulation CPU Usage: 14639 ms
