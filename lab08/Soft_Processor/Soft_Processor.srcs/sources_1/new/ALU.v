@@ -21,22 +21,33 @@
 
 
 module ALU(
-    input [7:0]x,
-    input [7:0]y,
-    input [2:0]alu_op,
+    input [7:0]rx,
+    input [7:0]ry,
+    input [7:0]imm,
+    input [1:0]alu_op,
+    input imm_op,
     
     output comp_res,
     output [7:0]alu_res
     );
     
     reg [7:0]alu_res_reg = 0;  
+    reg [7:0]x = 0;
+    reg [7:0]y = 0;
     
-always @(alu_op) begin
+    
+always @(alu_op or imm_op) begin
+    x <= rx;
+    
+    //imm_mux
+    if(imm_op) y = imm;
+    else y = ry;
+    
     case(alu_op) 
         2'b00: alu_res_reg = x&y;
         2'b01: alu_res_reg = x+y;
-        2'b10: alu_res_reg = &(x^y);
-        2'b11: ;
+        2'b10: alu_res_reg = (x^y);
+        2'b11: alu_res_reg = imm;
     
         default: begin
             alu_res_reg = 8'h00;

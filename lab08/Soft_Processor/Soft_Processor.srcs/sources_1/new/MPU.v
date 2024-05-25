@@ -41,7 +41,7 @@ module MPU(
     //Instruction wires
     wire [31:0]instr_bus;
     wire [1:0]pc_op = instr_bus[25:24];
-    wire [2:0]alu_op=instr_bus[21:20];
+    wire [1:0]alu_op=instr_bus[21:20];
     wire [2:0]rx_op=instr_bus[18:16];
     wire imm_op=instr_bus[15];
     wire [2:0]ry_op=instr_bus[14:12];
@@ -57,12 +57,21 @@ module MPU(
     wire [7:0] rx;
     wire [7:0] ry;
     wire [8*8-1:0]registers = {r0, r1, r2, r3, r4, r5, r6, pc};
+    wire [8*7-1:0]general_registers = {r0, r1, r2, r3, r4, r5, r6};
+    wire [8*7-1:0]new_general_registers;
+    
+    localparam BYTE = 8;
     
     //CYCLE
-    //wire [8*8-1:0]next_registers = {r0, r1, r2, r3, r4, r5, r6, next_pc_addr};
-    
     always @(posedge clk) begin
     
+        r0 <= new_general_registers[BYTE-1:0];
+        r1 <= new_general_registers[2*BYTE-1:BYTE];
+        r2 <= new_general_registers[3*BYTE-1:2*BYTE];
+        r3 <= new_general_registers[4*BYTE-1:3*BYTE];
+        r4 <= new_general_registers[5*BYTE-1:4*BYTE];
+        r5 <= new_general_registers[6*BYTE-1:5*BYTE];
+        r6 <= new_general_registers[7*BYTE-1:6*BYTE];
         pc <= next_pc_addr;
     end
     
@@ -78,9 +87,11 @@ module MPU(
     );
     
     ALU mpu_alu(
-    .x(rx),
-    .y(ry),
+    .rx(rx),
+    .ry(ry),
+    .imm(imm),
     .alu_op(alu_op),
+    .imm_op(imm_op),
     
     .comp_res(comp_res),
     .alu_res(alu_res)
@@ -98,6 +109,17 @@ module MPU(
         .selector(ry_op),
     
         .sel_register(ry)
+    );
+    
+    DECODER reg_dec
+    (
+         .selector(d_op),
+         .rd_op(rd_op),
+         .alu_res(alu_res),
+         .data_bus(data_bus),
+         .registers(general_registers),
+    
+        .new_registers(new_general_registers)
     );
     
     //MEM
