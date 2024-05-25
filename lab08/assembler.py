@@ -43,12 +43,16 @@ def mov_constr(R1 : int, R2 : int) -> int:
 
     return instr.ljust(32, "0")[::-1]
 
-print("00000000001111111111222222222233"[::-1])
-print("01234567890123456789012345678901"[::-1])
-print("---------------MY---------------")
-print(mov_constr(1, 2))
-print("-------------SCRIPT-------------")
-integer_value = int(mov_constr(1, 2), 2)
-# Convert integer to hexadecimal string
-hex_string = hex(integer_value)
-print(hex_string)
+def print_bin(instruction):
+    print("00000000001111111111222222222233"[::-1])
+    print("01234567890123456789012345678901"[::-1])
+    print("---------------MY---------------")
+    print(instruction)
+
+
+def print_hex(bin_instruction):
+    integer_value = int(mov_constr(1, 2), 2)
+    hex_string = hex(integer_value)
+    print(hex_string)
+
+print_bin(mov_constr(1, 2))
