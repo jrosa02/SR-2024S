@@ -25,6 +25,10 @@ def main():
                 instr = mov_constr(reg_dict[words[1]], reg_dict[words[2]])
             case "movi":
                 instr = movi_constr(reg_dict[words[1]], int(words[2], 16))
+            case "jump": 
+                instr = jump_constr(reg_dict[words[1]])
+            case "jumpi":
+                instr = jumpi_constr(int(words[2], 16))
             case _:
                 instr = nop_constr()
         with open("machine_code.txt", "a+") as machine_code:
@@ -126,13 +130,140 @@ def jump_constr(Rx : int) -> int:
     instr = pl_ins_part(instr, "imm", 0)
     instr = pl_ins_part(instr, "d_op", 7)
     instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", Rx)
+    instr = pl_ins_part(instr, "imm_op", 0)
+    instr = pl_ins_part(instr, "rx_op", 0)
+    instr = pl_ins_part(instr, "alu_op", 3)
+    instr = pl_ins_part(instr, "pc_op", 1)
+
+    return instr.ljust(32, "0")[::-1]
+
+def jumpi_constr(val : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", val)
+    instr = pl_ins_part(instr, "d_op", 7)
+    instr = pl_ins_part(instr, "rd_op", 0)
     instr = pl_ins_part(instr, "ry_op", 0)
     instr = pl_ins_part(instr, "imm_op", 1)
+    instr = pl_ins_part(instr, "rx_op", 0)
+    instr = pl_ins_part(instr, "alu_op", 3)
+    instr = pl_ins_part(instr, "pc_op", 1)
+
+    return instr.ljust(32, "0")[::-1]
+
+def jz_constr(Rx : int, val : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", val)
+    instr = pl_ins_part(instr, "d_op", 7)
+    instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", Rx)
+    instr = pl_ins_part(instr, "imm_op", 0)
     instr = pl_ins_part(instr, "rx_op", reg_dict["R6"])
     instr = pl_ins_part(instr, "alu_op", 3)
     instr = pl_ins_part(instr, "pc_op", 1)
 
     return instr.ljust(32, "0")[::-1]
+
+def jnz_constr(Rx : int, val : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", val)
+    instr = pl_ins_part(instr, "d_op", 7)
+    instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", Rx)
+    instr = pl_ins_part(instr, "imm_op", 1)
+    instr = pl_ins_part(instr, "rx_op", reg_dict["R6"])
+    instr = pl_ins_part(instr, "alu_op", 3)
+    instr = pl_ins_part(instr, "pc_op", 2)
+
+    return instr.ljust(32, "0")[::-1]
+
+def add_constr(Rd : int, Rx : int, Ry : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", 0)
+    instr = pl_ins_part(instr, "d_op", Rd)
+    instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", Ry)
+    instr = pl_ins_part(instr, "imm_op", 0)
+    instr = pl_ins_part(instr, "rx_op", Rx)
+    instr = pl_ins_part(instr, "alu_op", 1)
+    instr = pl_ins_part(instr, "pc_op", 0)
+
+    return instr.ljust(32, "0")[::-1]
+
+def addi_constr(Rd : int, Rx : int, val : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", val)
+    instr = pl_ins_part(instr, "d_op", Rd)
+    instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", 0)
+    instr = pl_ins_part(instr, "imm_op", 1)
+    instr = pl_ins_part(instr, "rx_op", Rx)
+    instr = pl_ins_part(instr, "alu_op", 1)
+    instr = pl_ins_part(instr, "pc_op", 0)
+
+    return instr.ljust(32, "0")[::-1]
+
+def and_constr(Rd : int, Rx : int, Ry : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", 0)
+    instr = pl_ins_part(instr, "d_op", Rd)
+    instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", Ry)
+    instr = pl_ins_part(instr, "imm_op", 0)
+    instr = pl_ins_part(instr, "rx_op", Rx)
+    instr = pl_ins_part(instr, "alu_op", 0)
+    instr = pl_ins_part(instr, "pc_op", 0)
+
+    return instr.ljust(32, "0")[::-1]
+
+def andi_constr(Rd : int, Rx : int, val : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", val)
+    instr = pl_ins_part(instr, "d_op", Rd)
+    instr = pl_ins_part(instr, "rd_op", 0)
+    instr = pl_ins_part(instr, "ry_op", 0)
+    instr = pl_ins_part(instr, "imm_op", 1)
+    instr = pl_ins_part(instr, "rx_op", Rx)
+    instr = pl_ins_part(instr, "alu_op", 0)
+    instr = pl_ins_part(instr, "pc_op", 0)
+
+    return instr.ljust(32, "0")[::-1]
+
+def load_constr(Rd : int, Rx : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", 0)
+    instr = pl_ins_part(instr, "d_op", Rd)
+    instr = pl_ins_part(instr, "rd_op", 1)
+    instr = pl_ins_part(instr, "ry_op", 0)
+    instr = pl_ins_part(instr, "imm_op", 1)
+    instr = pl_ins_part(instr, "rx_op", Rx)
+    instr = pl_ins_part(instr, "alu_op", 1)
+    instr = pl_ins_part(instr, "pc_op", 0)
+
+    return instr.ljust(32, "0")[::-1]
+
+def loadi_constr(Rd : int, val : int) -> int:
+    
+    instr = 32*"0"
+    instr = pl_ins_part(instr, "imm", val)
+    instr = pl_ins_part(instr, "d_op", Rd)
+    instr = pl_ins_part(instr, "rd_op", 1)
+    instr = pl_ins_part(instr, "ry_op", 0)
+    instr = pl_ins_part(instr, "imm_op", 1)
+    instr = pl_ins_part(instr, "rx_op", 0)
+    instr = pl_ins_part(instr, "alu_op", 3)
+    instr = pl_ins_part(instr, "pc_op", 0)
+
+    return instr.ljust(32, "0")[::-1]
+
 
 def print_bin(instruction):
     print("00000000001111111111222222222233"[::-1])

@@ -71,7 +71,7 @@ module MPU(
         r3 <= new_general_registers[4*BYTE-1:3*BYTE];
         r4 <= new_general_registers[5*BYTE-1:4*BYTE];
         r5 <= new_general_registers[6*BYTE-1:5*BYTE];
-        r6 <= new_general_registers[7*BYTE-1:6*BYTE];
+        r6 <= 0;
         
         pc <= next_pc_addr;
     end
