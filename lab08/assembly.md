@@ -36,10 +36,6 @@
 | 1 |alu_res = x+y|
 | 2 |alu_res = &(x^y) something like x==y but with bit mask|
 | 3 |alu_res = imm|
-| 4 |          |
-| 5 |          |
-| 6 |          |
-| 7 |          |
 | default| alu_res = 0|
 
 #### rx_op

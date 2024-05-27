@@ -1,3 +1,6 @@
+movi R0 0x00
+movi R1 0x01
+mov R1 R2
 
 
 
@@ -6,4 +9,7 @@
 
 
 
->label
+
+
+
+

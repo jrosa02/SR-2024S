@@ -56,8 +56,8 @@ module MPU(
     //R_MUXs
     wire [7:0] rx;
     wire [7:0] ry;
-    wire [8*8-1:0]registers = {r0, r1, r2, r3, r4, r5, r6, pc};
-    wire [8*7-1:0]general_registers = {r0, r1, r2, r3, r4, r5, r6};
+    wire [8*8-1:0]registers = {pc ,r6, r5, r4, r3, r2, r1, r0};
+    wire [8*7-1:0]general_registers = {r6, r5, r4, r3, r2, r1, r0};
     wire [8*7-1:0]new_general_registers;
     
     localparam BYTE = 8;
@@ -72,6 +72,7 @@ module MPU(
         r4 <= new_general_registers[5*BYTE-1:4*BYTE];
         r5 <= new_general_registers[6*BYTE-1:5*BYTE];
         r6 <= new_general_registers[7*BYTE-1:6*BYTE];
+        
         pc <= next_pc_addr;
     end
     
@@ -119,7 +120,7 @@ module MPU(
          .data_bus(data_bus),
          .registers(general_registers),
     
-        .new_registers(new_general_registers)
+        .new_general_registers(new_general_registers)
     );
     
     //MEM

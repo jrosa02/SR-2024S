@@ -31,12 +31,16 @@ module PC_HANDLER(
     
     reg [7:0]next_pc_addr_reg = 0;
     
-always @ (cmp_res or pc_op)
+always @ (cmp_res or pc_op or pc_addr) begin
     case({pc_op, cmp_res})
-    //3'b00:;
-    3'b011: next_pc_addr_reg = alu_res; //jmpz
-    3'b100: next_pc_addr_reg = alu_res;// jmpnz
+    3'b00: next_pc_addr_reg <= pc_addr + 1;
+    3'b011: next_pc_addr_reg <= alu_res; //jmpz
+    3'b100: next_pc_addr_reg <= alu_res;// jmpnz
     //2'b11:;
-    default: next_pc_addr_reg = next_pc_addr_reg + 1;
+    default: next_pc_addr_reg <= pc_addr + 1;
     endcase 
+end
+    
+    assign next_pc_addr = next_pc_addr_reg;
+    
 endmodule

@@ -31,7 +31,7 @@ module R_MUX(
     
     reg [7:0]sel_register_reg = 0;
     
-    always @(selector) begin
+    always @(selector or registers) begin
         case(selector) 
         3'd0: sel_register_reg = registers[BYTE-1:0];
         3'd1: sel_register_reg = registers[2*BYTE-1:BYTE];
@@ -44,4 +44,6 @@ module R_MUX(
         default: sel_register_reg = 0;
         endcase 
     end
+    
+    assign sel_register = sel_register_reg;
 endmodule
