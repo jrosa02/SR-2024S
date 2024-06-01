@@ -11,48 +11,136 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="10.748 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="892.250 ns"></ZoomStartTime>
+      <ZoomEndTime time="910.089 ns"></ZoomEndTime>
+      <Cursor1Time time="904.554 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="220"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
-   <wvobject fp_name="/top_sim/procek/reg_dec/selector" type="array">
-      <obj_property name="ElementShortName">selector[2:0]</obj_property>
-      <obj_property name="ObjectShortName">selector[2:0]</obj_property>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/top_sim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/rd_op" type="logic">
-      <obj_property name="ElementShortName">rd_op</obj_property>
-      <obj_property name="ObjectShortName">rd_op</obj_property>
+   <wvobject fp_name="/top_sim/gpi" type="array">
+      <obj_property name="ElementShortName">gpi[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpi[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/alu_res" type="array">
-      <obj_property name="ElementShortName">alu_res[7:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_res[7:0]</obj_property>
+   <wvobject fp_name="/top_sim/gpo" type="array">
+      <obj_property name="ElementShortName">gpo[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpo[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/data_bus" type="array">
+   <wvobject fp_name="/top_sim/procek/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/gpi" type="array">
+      <obj_property name="ElementShortName">gpi[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpi[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/gpo" type="array">
+      <obj_property name="ElementShortName">gpo[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpo[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/r0" type="array">
+      <obj_property name="ElementShortName">r0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/r1" type="array">
+      <obj_property name="ElementShortName">r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/r2" type="array">
+      <obj_property name="ElementShortName">r2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/r3" type="array">
+      <obj_property name="ElementShortName">r3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/r6" type="array">
+      <obj_property name="ElementShortName">r6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r6[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/pc" type="array">
+      <obj_property name="ElementShortName">pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/next_pc_addr" type="array">
+      <obj_property name="ElementShortName">next_pc_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">next_pc_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/data_bus" type="array">
       <obj_property name="ElementShortName">data_bus[7:0]</obj_property>
       <obj_property name="ObjectShortName">data_bus[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/registers" type="array">
-      <obj_property name="ElementShortName">registers[55:0]</obj_property>
-      <obj_property name="ObjectShortName">registers[55:0]</obj_property>
+   <wvobject fp_name="/top_sim/procek/instr_bus" type="array">
+      <obj_property name="ElementShortName">instr_bus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_bus[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/new_general_registers" type="array">
+   <wvobject fp_name="/top_sim/procek/pc_op" type="array">
+      <obj_property name="ElementShortName">pc_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/rx_op" type="array">
+      <obj_property name="ElementShortName">rx_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/imm_op" type="logic">
+      <obj_property name="ElementShortName">imm_op</obj_property>
+      <obj_property name="ObjectShortName">imm_op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/ry_op" type="array">
+      <obj_property name="ElementShortName">ry_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ry_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/rd_op" type="logic">
+      <obj_property name="ElementShortName">rd_op</obj_property>
+      <obj_property name="ObjectShortName">rd_op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/d_op" type="array">
+      <obj_property name="ElementShortName">d_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">d_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/imm" type="array">
+      <obj_property name="ElementShortName">imm[7:0]</obj_property>
+      <obj_property name="ObjectShortName">imm[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/comp_res" type="logic">
+      <obj_property name="ElementShortName">comp_res</obj_property>
+      <obj_property name="ObjectShortName">comp_res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/alu_res" type="array">
+      <obj_property name="ElementShortName">alu_res[7:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_res[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/rx" type="array">
+      <obj_property name="ElementShortName">rx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/ry" type="array">
+      <obj_property name="ElementShortName">ry[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ry[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/registers" type="array">
+      <obj_property name="ElementShortName">registers[63:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/general_registers" type="array">
+      <obj_property name="ElementShortName">general_registers[55:0]</obj_property>
+      <obj_property name="ObjectShortName">general_registers[55:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_sim/procek/new_general_registers" type="array">
       <obj_property name="ElementShortName">new_general_registers[55:0]</obj_property>
       <obj_property name="ObjectShortName">new_general_registers[55:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/rd_mux" type="array">
-      <obj_property name="ElementShortName">rd_mux[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_mux[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/new_registers_reg" type="array">
-      <obj_property name="ElementShortName">new_registers_reg[63:0]</obj_property>
-      <obj_property name="ObjectShortName">new_registers_reg[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_sim/procek/reg_dec/BYTE" type="array">
+   <wvobject fp_name="/top_sim/procek/BYTE" type="array">
       <obj_property name="ElementShortName">BYTE[31:0]</obj_property>
       <obj_property name="ObjectShortName">BYTE[31:0]</obj_property>
    </wvobject>

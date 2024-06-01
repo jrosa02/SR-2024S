@@ -47,7 +47,7 @@ always @(*) begin
     case(alu_op) 
         2'b00: alu_res_reg <= x&y;
         2'b01: alu_res_reg <= x+y;
-        2'b10: alu_res_reg <= (x^y);
+        2'b10: alu_res_reg <= ~(x ^ y);
         2'b11: alu_res_reg <= imm;
     
         default: begin
@@ -55,7 +55,7 @@ always @(*) begin
         end
     endcase 
     
-    comp_res_reg <= &(x^y);
+    comp_res_reg <= &(~(x ^ y));
 end
     
    assign comp_res = comp_res_reg;

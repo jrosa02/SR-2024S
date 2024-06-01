@@ -9,9 +9,15 @@ module d_mem
 );
 //-----------------------------------------------
 //data memory
-wire [7:0]data_memory[255:0];
-assign data_memory[0]=8'b00000001;
-assign data_memory[1]=8'b00000010;
+reg [7:0]data_memory[255:0];
+
+reg [8:0]i = 0;
+initial begin
+    for(i = 0; i < 256; i=i+1) begin
+    data_memory[i] = 0;
+    end
+end
+
 //-----------------------------------------------
 assign data=data_memory[address];
 //-----------------------------------------------

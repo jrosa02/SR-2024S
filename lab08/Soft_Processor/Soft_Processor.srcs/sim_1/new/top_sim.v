@@ -21,11 +21,11 @@
 
 
 module top_sim(
-    input x
     );
     
-    reg clk = 0;
-    wire clk_w = clk;
+    reg clk = 1'b1;
+    reg [7:0]gpi = 0;
+    wire [7:0]gpo;
     
 initial begin
     while(1)begin
@@ -33,9 +33,17 @@ initial begin
     end
 end
 
+initial begin
+    gpi = 8'h00;
+    #450; gpi = 8'h01;
+    #450; gpi = 8'h02;
+end
+
     MPU procek
     (
-        .clk(clk_w)
+        .clk(clk),
+        .gpo(gpo),
+        .gpi(gpi)
     );
  
 endmodule

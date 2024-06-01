@@ -21,7 +21,9 @@
 
 
 module MPU(
-    input clk
+    input clk,
+    input [7:0]gpi,
+    output [7:0]gpo
     );
     
     reg [7:0] r0 = 0;
@@ -70,7 +72,7 @@ module MPU(
         r2 <= new_general_registers[3*BYTE-1:2*BYTE];
         r3 <= new_general_registers[4*BYTE-1:3*BYTE];
         r4 <= new_general_registers[5*BYTE-1:4*BYTE];
-        r5 <= new_general_registers[6*BYTE-1:5*BYTE];
+        r5 <= gpi;
         r6 <= 0;
         
         pc <= next_pc_addr;
@@ -135,5 +137,7 @@ module MPU(
         .address(alu_res),
         .data(data_bus)
     );
+    
+    assign gpo = r4;
     
 endmodule

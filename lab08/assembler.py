@@ -28,7 +28,19 @@ def main():
             case "jump": 
                 instr = jump_constr(reg_dict[words[1]])
             case "jumpi":
-                instr = jumpi_constr(int(words[2], 16))
+                instr = jumpi_constr(int(words[1], 16))
+            case "jz":
+                instr = jz_constr(reg_dict[words[1]], int(words[2], 16))
+            case "jnz":
+                instr = jnz_constr(reg_dict[words[1]], int(words[2], 16))
+            case "add":
+                instr = add_constr(reg_dict[words[1]], reg_dict[words[2]], reg_dict[words[2]])
+            case "addi":
+                instr = addi_constr(reg_dict[words[1]], reg_dict[words[2]], int(words[3], 16))
+            case "and":
+                instr = and_constr(reg_dict[words[1]], reg_dict[words[2]], reg_dict[words[2]])
+            case "andi":
+                instr = andi_constr(reg_dict[words[1]], reg_dict[words[2]], int(words[3], 16))
             case _:
                 instr = nop_constr()
         with open("machine_code.txt", "a+") as machine_code:
@@ -39,7 +51,7 @@ def main():
 
 instr_syntax = {"imm":(0, 8), "d_op":(8, 3), "rd_op":(11, 1), "ry_op":(12, 3),
                 "imm_op":(15, 1), "rx_op":(16, 3), "alu_op":(20, 2), "pc_op":(24, 2)}
-reg_dict = {"R0": 0, "R1": 1, "R2": 2, "R3": 3, "R4": 4, "R5": 5, "R6": 6, "PC": 7}
+reg_dict = {"R0": 0, "R1": 1, "R2": 2, "R3": 3, "GPO": 4, "GPI": 5, "R6": 6, "PC": 7}
 
 ins_place = lambda word: instr_syntax[word][0]
 ins_len = lambda word: instr_syntax[word][1]
@@ -158,9 +170,9 @@ def jz_constr(Rx : int, val : int) -> int:
     instr = pl_ins_part(instr, "imm", val)
     instr = pl_ins_part(instr, "d_op", 7)
     instr = pl_ins_part(instr, "rd_op", 0)
-    instr = pl_ins_part(instr, "ry_op", Rx)
+    instr = pl_ins_part(instr, "ry_op", reg_dict["R6"])
     instr = pl_ins_part(instr, "imm_op", 0)
-    instr = pl_ins_part(instr, "rx_op", reg_dict["R6"])
+    instr = pl_ins_part(instr, "rx_op", Rx)
     instr = pl_ins_part(instr, "alu_op", 3)
     instr = pl_ins_part(instr, "pc_op", 1)
 
@@ -172,9 +184,9 @@ def jnz_constr(Rx : int, val : int) -> int:
     instr = pl_ins_part(instr, "imm", val)
     instr = pl_ins_part(instr, "d_op", 7)
     instr = pl_ins_part(instr, "rd_op", 0)
-    instr = pl_ins_part(instr, "ry_op", Rx)
-    instr = pl_ins_part(instr, "imm_op", 1)
-    instr = pl_ins_part(instr, "rx_op", reg_dict["R6"])
+    instr = pl_ins_part(instr, "ry_op", reg_dict["R6"])
+    instr = pl_ins_part(instr, "imm_op", 0)
+    instr = pl_ins_part(instr, "rx_op", Rx)
     instr = pl_ins_part(instr, "alu_op", 3)
     instr = pl_ins_part(instr, "pc_op", 2)
 
@@ -280,4 +292,4 @@ def print_hex(bin_instruction):
 if __name__ == "__main__":
     main()
 
-print_hex(movi_constr(reg_dict["R2"], int("0x34", 16)))
+print_bin(jnz_constr(reg_dict["R0"], int("8", 10)))

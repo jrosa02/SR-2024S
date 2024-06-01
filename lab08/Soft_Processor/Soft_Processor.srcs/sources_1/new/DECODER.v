@@ -49,8 +49,7 @@ always @(*) begin
         3'd2: new_registers_reg[3*BYTE-1:2*BYTE] <= rd_mux;
         3'd3: new_registers_reg[4*BYTE-1:3*BYTE] <= rd_mux;
         3'd4: new_registers_reg[5*BYTE-1:4*BYTE] <= rd_mux;
-        3'd5: new_registers_reg[6*BYTE-1:5*BYTE] <= rd_mux;
-        3'd6: new_registers_reg[7*BYTE-1:6*BYTE] <= rd_mux;
+        3'd6: new_registers_reg[7*BYTE-1:6*BYTE] <= 0;
         default: new_registers_reg <= registers;
     endcase 
 end
