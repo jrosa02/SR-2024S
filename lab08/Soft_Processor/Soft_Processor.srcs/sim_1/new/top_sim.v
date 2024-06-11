@@ -35,15 +35,15 @@ end
 
 initial begin
     gpi = 8'h00;
-    #450; gpi = 8'h01;
-    #450; gpi = 8'h02;
+    #4600; gpi = 8'h01;
+    #4600; gpi = 8'h02;
 end
 
-    MPU procek
+    Artix_wrapper procek
     (
         .clk(clk),
-        .gpo(gpo),
-        .gpi(gpi)
+        .led(gpo),
+        .sw(gpi)
     );
  
 endmodule

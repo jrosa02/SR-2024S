@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/new/ALU.v" \
+"../../../../Artix_MPU.srcs/sources_1/new/Artix_wrapper.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/new/DECODER.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/new/MPU.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/new/PC_HANDLER.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/new/R_MUX.v" \
+"../../../../Artix_MPU.srcs/sources_1/new/clock_divider.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/imports/Downloads/d_mem.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sources_1/imports/Downloads/i_mem.v" \
+"../../../../../Soft_Processor/Soft_Processor.srcs/sim_1/new/top_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

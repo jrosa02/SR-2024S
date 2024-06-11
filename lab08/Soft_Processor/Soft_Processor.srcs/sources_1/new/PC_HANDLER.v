@@ -32,11 +32,11 @@ module PC_HANDLER(
     reg [7:0]next_pc_addr_reg = 0;
     
 always @ (*) begin
-    case({pc_op, cmp_res})
-    3'b00: next_pc_addr_reg = pc_addr + 1;
+    casex({pc_op, cmp_res})
+    3'b000: next_pc_addr_reg = pc_addr + 1;
     3'b011: next_pc_addr_reg = alu_res; //jz
     3'b100: next_pc_addr_reg = alu_res;// jnz
-    //2'b11:;
+    3'b11x: next_pc_addr_reg = alu_res;//jump jumpi
     default: next_pc_addr_reg = pc_addr + 1;
     endcase 
 end

@@ -159,8 +159,8 @@ def jumpi_constr(val : int) -> int:
     instr = pl_ins_part(instr, "ry_op", 0)
     instr = pl_ins_part(instr, "imm_op", 1)
     instr = pl_ins_part(instr, "rx_op", 0)
-    instr = pl_ins_part(instr, "alu_op", 3)
-    instr = pl_ins_part(instr, "pc_op", 1)
+    instr = pl_ins_part(instr, "alu_op", 4)
+    instr = pl_ins_part(instr, "pc_op", 3)
 
     return instr.ljust(32, "0")[::-1]
 

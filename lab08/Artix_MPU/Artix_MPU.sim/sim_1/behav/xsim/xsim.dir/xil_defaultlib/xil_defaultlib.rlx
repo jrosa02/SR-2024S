@@ -1,0 +1,15 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Artix_MPU/Artix_MPU.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Artix_MPU/Artix_MPU.srcs/sources_1/new/Artix_wrapper.v,1717352827,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/DECODER.v,,Artix_wrapper,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Artix_MPU/Artix_MPU.srcs/sources_1/new/clock_divider.v,1717353354,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/imports/Downloads/d_mem.v,,clock_divider,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sim_1/new/top_sim.v,1717353204,verilog,,,,top_sim,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/imports/Downloads/d_mem.v,1717236071,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/imports/Downloads/i_mem.v,,d_mem,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/imports/Downloads/i_mem.v,1717354121,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sim_1/new/top_sim.v,,i_mem,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/ALU.v,1717241635,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Artix_MPU/Artix_MPU.srcs/sources_1/new/Artix_wrapper.v,,ALU,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/DECODER.v,1717240178,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/MPU.v,,DECODER,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/MPU.v,1717241355,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/PC_HANDLER.v,,MPU,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/PC_HANDLER.v,1717354396,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/R_MUX.v,,PC_HANDLER,,,,,,,,
+C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Soft_Processor/Soft_Processor.srcs/sources_1/new/R_MUX.v,1716671488,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab08/Artix_MPU/Artix_MPU.srcs/sources_1/new/clock_divider.v,,R_MUX,,,,,,,,

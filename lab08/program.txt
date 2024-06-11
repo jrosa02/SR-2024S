@@ -1,4 +1,4 @@
-movi R0 0x00 //sysinit clk=100Hz
+movi R0 0x00 //sysinit clk=200Hz
 movi R1 0x01
 movi R2 0x02
 movi R3 0x03
@@ -17,5 +17,5 @@ addi R0 R0 0xFF  // --R0
 jnz R0 0x0F      //}while(R0!=0)
 movi GPO 0x08    //light LED[3], LED[2] off
 andi R0 GPI 0x02 //do{store GPI[1]
-jz R0 0x12      //}while(R0 == 0)
+jz R0 0x12       //}while(R0 == 0)
 jumpi 0
