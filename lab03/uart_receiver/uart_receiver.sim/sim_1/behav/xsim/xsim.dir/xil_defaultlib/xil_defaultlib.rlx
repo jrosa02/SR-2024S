@@ -1,9 +1,0 @@
-0.7
-2020.2
-Oct 14 2022
-05:20:55
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/Uart_transmiter/Uart_transmiter.srcs/sim_1/new/stimulate_transmitter.v,1710700248,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/Uart_transmiter/Uart_transmiter.srcs/sources_1/new/transmitter_uart.v,,stimulate_transmitter,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/Uart_transmiter/Uart_transmiter.srcs/sources_1/new/transmitter_uart.v,1710753183,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/uart_receiver/uart_receiver.srcs/sim_1/imports/new/testbench.v,,transmitter_uart,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/uart_receiver/uart_receiver.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/uart_receiver/uart_receiver.srcs/sim_1/imports/new/testbench.v,1710700541,verilog,,,,testbench,,,,,,,,
-C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/uart_receiver/uart_receiver.srcs/sources_1/new/receiver_uart.v,1710699941,verilog,,C:/Users/janro/Pulpit/AGH_FILES/SR-2024S/lab03/Uart_transmiter/Uart_transmiter.srcs/sim_1/new/stimulate_transmitter.v,,receiver_uart,,,,,,,,

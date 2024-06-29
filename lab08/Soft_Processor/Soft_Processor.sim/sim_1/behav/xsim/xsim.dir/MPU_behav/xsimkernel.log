@@ -1,7 +1,0 @@
-Running: xsim.dir/MPU_behav/xsimk.exe -simmode gui -wdb MPU_behav.wdb -simrunnum 0 -socket 53085
-Design successfully loaded
-Design Loading Memory Usage: 7816 KB (Peak: 7816 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 8468 KB (Peak: 8468 KB)
-Simulation CPU Usage: 0 ms

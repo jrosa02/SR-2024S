@@ -1,7 +1,0 @@
-Running: xsim.dir/or_gate_behav/xsimk.exe -simmode gui -wdb or_gate_behav.wdb -simrunnum 0 -socket 56649
-Design successfully loaded
-Design Loading Memory Usage: 8484 KB (Peak: 8484 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 9080 KB (Peak: 9080 KB)
-Simulation CPU Usage: 15 ms
